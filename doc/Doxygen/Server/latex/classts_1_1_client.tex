@@ -1,0 +1,98 @@
+\hypertarget{classts_1_1_client}{}\section{ts\+:\+:Client Class Reference}
+\label{classts_1_1_client}\index{ts\+::\+Client@{ts\+::\+Client}}
+Inheritance diagram for ts\+:\+:Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classts_1_1_client}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classts_1_1_client_a892b1cd679659a7b35dc2da44938e509}\label{classts_1_1_client_a892b1cd679659a7b35dc2da44938e509}} 
+{\bfseries Client} (boost\+::asio\+::io\+\_\+service \&ios)
+\item 
+boost\+::asio\+::ip\+::tcp\+::socket \& \hyperlink{classts_1_1_client_a02aaec358cb00665465e5ebb0e031ea2}{get\+Socket} ()
+\item 
+\mbox{\Hypertarget{classts_1_1_client_a5f37c3c03162add1fcf084cd10bf4d78}\label{classts_1_1_client_a5f37c3c03162add1fcf084cd10bf4d78}} 
+void \hyperlink{classts_1_1_client_a5f37c3c03162add1fcf084cd10bf4d78}{start} ()
+\begin{DoxyCompactList}\small\item\em Start the client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classts_1_1_client_aec10dc278b3e8ede97beee9ef4393076}\label{classts_1_1_client_aec10dc278b3e8ede97beee9ef4393076}} 
+void \hyperlink{classts_1_1_client_aec10dc278b3e8ede97beee9ef4393076}{stop} ()
+\begin{DoxyCompactList}\small\item\em Stop the client. \end{DoxyCompactList}\item 
+void \hyperlink{classts_1_1_client_a524c5585285a81de781fc7e1d1cd3a16}{set\+On\+Stop\+Client\+Callback} (std\+::function$<$ void(boost\+::shared\+\_\+ptr$<$ \hyperlink{classts_1_1_client}{Client} $>$ client)$>$ on\+Stop\+Client)
+\item 
+void \hyperlink{classts_1_1_client_a60a5793486ab652d476b930dc432884a}{send\+Command} (std\+::string const \&msg)
+\item 
+std\+::string \hyperlink{classts_1_1_client_a76240db1ee8a0c56be0e7b88e3f7e52e}{get\+Info} ()
+\item 
+\mbox{\Hypertarget{classts_1_1_client_a3f8170f3d749c048125dc9aaf312c7bf}\label{classts_1_1_client_a3f8170f3d749c048125dc9aaf312c7bf}} 
+void \hyperlink{classts_1_1_client_a3f8170f3d749c048125dc9aaf312c7bf}{send\+Server\+Disconnect\+Request} ()
+\begin{DoxyCompactList}\small\item\em Send a request to notify server disconnection. \end{DoxyCompactList}\item 
+void \hyperlink{classts_1_1_client_a4fd19e3b8dae284cd0f30bf7bd525720}{set\+Data\+Recorder} (std\+::shared\+\_\+ptr$<$ \hyperlink{classts_1_1_i_data_recorder}{I\+Data\+Recorder} $>$ data\+Recorder)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classts_1_1_client_a885dbb0d49886f3402b8ed12ab9c076a}\label{classts_1_1_client_a885dbb0d49886f3402b8ed12ab9c076a}} 
+class {\bfseries Request\+Handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classts_1_1_client_a76240db1ee8a0c56be0e7b88e3f7e52e}\label{classts_1_1_client_a76240db1ee8a0c56be0e7b88e3f7e52e}} 
+\index{ts\+::\+Client@{ts\+::\+Client}!get\+Info@{get\+Info}}
+\index{get\+Info@{get\+Info}!ts\+::\+Client@{ts\+::\+Client}}
+\subsubsection{\texorpdfstring{get\+Info()}{getInfo()}}
+{\footnotesize\ttfamily std\+::string ts\+::\+Client\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return info about the client \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1_client_a02aaec358cb00665465e5ebb0e031ea2}\label{classts_1_1_client_a02aaec358cb00665465e5ebb0e031ea2}} 
+\index{ts\+::\+Client@{ts\+::\+Client}!get\+Socket@{get\+Socket}}
+\index{get\+Socket@{get\+Socket}!ts\+::\+Client@{ts\+::\+Client}}
+\subsubsection{\texorpdfstring{get\+Socket()}{getSocket()}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::socket\& ts\+::\+Client\+::get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the boost socket instance \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1_client_a60a5793486ab652d476b930dc432884a}\label{classts_1_1_client_a60a5793486ab652d476b930dc432884a}} 
+\index{ts\+::\+Client@{ts\+::\+Client}!send\+Command@{send\+Command}}
+\index{send\+Command@{send\+Command}!ts\+::\+Client@{ts\+::\+Client}}
+\subsubsection{\texorpdfstring{send\+Command()}{sendCommand()}}
+{\footnotesize\ttfamily void ts\+::\+Client\+::send\+Command (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{msg }\end{DoxyParamCaption})}
+
+Send command 
+\begin{DoxyParams}{Parameters}
+{\em msg} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1_client_a4fd19e3b8dae284cd0f30bf7bd525720}\label{classts_1_1_client_a4fd19e3b8dae284cd0f30bf7bd525720}} 
+\index{ts\+::\+Client@{ts\+::\+Client}!set\+Data\+Recorder@{set\+Data\+Recorder}}
+\index{set\+Data\+Recorder@{set\+Data\+Recorder}!ts\+::\+Client@{ts\+::\+Client}}
+\subsubsection{\texorpdfstring{set\+Data\+Recorder()}{setDataRecorder()}}
+{\footnotesize\ttfamily void ts\+::\+Client\+::set\+Data\+Recorder (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classts_1_1_i_data_recorder}{I\+Data\+Recorder} $>$}]{data\+Recorder }\end{DoxyParamCaption})}
+
+Set the data recorder type 
+\begin{DoxyParams}{Parameters}
+{\em data\+Recorder} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1_client_a524c5585285a81de781fc7e1d1cd3a16}\label{classts_1_1_client_a524c5585285a81de781fc7e1d1cd3a16}} 
+\index{ts\+::\+Client@{ts\+::\+Client}!set\+On\+Stop\+Client\+Callback@{set\+On\+Stop\+Client\+Callback}}
+\index{set\+On\+Stop\+Client\+Callback@{set\+On\+Stop\+Client\+Callback}!ts\+::\+Client@{ts\+::\+Client}}
+\subsubsection{\texorpdfstring{set\+On\+Stop\+Client\+Callback()}{setOnStopClientCallback()}}
+{\footnotesize\ttfamily void ts\+::\+Client\+::set\+On\+Stop\+Client\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(boost\+::shared\+\_\+ptr$<$ \hyperlink{classts_1_1_client}{Client} $>$ client)$>$}]{on\+Stop\+Client }\end{DoxyParamCaption})}
+
+Set the on stop client callback 
+\begin{DoxyParams}{Parameters}
+{\em on\+Stop\+Client} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Client/Client.\+hpp\end{DoxyCompactItemize}

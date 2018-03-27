@@ -1,0 +1,222 @@
+@startuml
+
+'ts = TekSpider
+
+namespace ts {
+
+	' Declaration
+	class ServerNetwork
+
+	' Definition
+
+	class ServerNetwork {
+            -mIos : boost::asio::io_service
+            -mServerSocket : common::tcp::ServerSocket
+            -mClientManager : ClientManager
+            -mDataRecorder : std::shared_ptr<IDataRecorder>
+
+            +ServerNetwork(std::string const &host, unsigned short port)
+            +~ServerNetwork()
+            +run() : void
+            +stop() : void
+            +sendCommandToClients(std::string const &msg) : void
+            +setDataRecorder(std::string const &type) : void
+            -setupAcceptor(std::string const &host, unsigned short port) : void
+            -setupCallbacks() : void
+            -onClientAccepted(ClientPtr client) : void
+            -notifyClientsServerDisconnect() : void
+	}
+
+	' Declaration
+	class Client
+	class SpiderServer<SpiderServer>
+	class Singleton<TSingleton>
+
+	' Relation
+	SpiderServer <|-- Singleton
+
+	' Definition
+	class Client {
+		-mSocket: common::tcp::ClientSocket
+		-mPacket : common::Packet
+		-mPubKey : std::string
+		-mIsFirstConnection : bool
+		-mIsAuthenticate : bool
+		-mRequestManager : common::RequestManager
+		-mPacketManager : common::PacketManager
+		-mOnStopClient : std::function<void(boost::shared_ptr<Client> client)>
+		-mIsStopped : bool
+		-mRequestHandler : std::shared_ptr<RequestHandler>
+		-mDataRecorder : std::shared_ptr<IDataRecorder>
+		+Client(boost::asio::io_service& ios)
+		+getSocket() : boost::asio::ip::tcp::socket &
+		+start() : void
+		+stop() : void
+		+setOnStopClientCallback(std::function<void(boost::shared_ptr<Client> client)> onStopClient) : void
+		+sendCommand(std::string const &msg) : void
+		+getInfo() : std::string
+		+sendServerDisconnectRequest() : void
+		+setDataRecorder(std::shared_ptr<IDataRecorder> dataRecorder) : void
+		-onReadCompletePacket(common::Packet const &packet) : void
+		-processReadLoop() : void
+		-handleReadPacket(const common::Packet &packet) : void
+		-notifyErrorInRequestReceived() : void
+	}
+
+	class SpiderServer {
+		-mCommandHandlerThread : std::unique_ptr<std::thread>
+	    	-mIsRunning : bool
+		-mCommands : std::unordered_map<std::string, CommandFunc>
+		-mServerNetwork : std::unique_ptr<ServerNetwork>
+		-mPort : unsigned short
+		-mFilePath : std::string
+		-mRecordType : std::string
+		-mHost : std::string
+
+		+SpiderServer()
+		+~SpiderServer()
+		+run() : void
+		+quit() : void
+		+setPort(unsigned short port) : void
+		+setFilePath(std::string const &filePath) : void
+		+setRecordType(std::string const &recordType) : void
+		+setHost(std::string const &host) : void
+		+getInfo() : std::string
+		-handleCommands() : void
+		-parseCommand() : std::pair<std::string, std::string>
+		-initialize() : void
+		-initializeCommands() : void
+		-showHelp() : void
+		-sendCommandToClients(std::string const &msg) : void
+		-showServerHelp() : void
+	}
+
+	class Singleton<TSingleton> {
+		-instance: TSingleton
+		+getInstance() : TSingleton
+
+	}
+
+namespace Data {
+
+    enum EventType {
+        KEYBORD
+        CLICK
+        MOUSE_MOVE
+        USER_ACTIVITY
+    }
+
+    enum MouseDirection {
+        UP
+        DOWN
+        RIGHT
+        LEFT
+        UP_RIGHT
+        UP_LEFT
+        DOWN_RIGHT
+        DOWN_LEFT
+    }
+
+    interface Event {
+        +Event()
+        +~Event()
+        ..
+        +Json    get()
+    }
+
+    Event <|.. Click
+    Event <|.. Mouse
+    Event <|.. KeyBord
+    Event <|.. UserActivity
+
+    class   ClickCoord {
+        +mX : int
+        +mY : int
+    }
+
+    enum   ClickType {
+        RIGHT
+        LEFT
+        MIDDLE
+    }
+
+    class   Click {
+        -mPoint : ClickCoord
+        -mType : ClickType
+        __
+        +Click()
+        +~Click()
+        ..
+        +void   set(int, int)
+        +Json   get()
+    }
+
+    class   Mouse {
+        -mPointStart : ClickCoord
+        -mPointEnd : ClickCoord
+        __
+        +Mouse()
+        +~Mouse()
+        ..
+        +void   set(ClickCoord, ClickCoord)
+        +Json   get()
+    }
+
+    class   KeyBord {
+        -mKeys : string
+        __
+        +KeyBord()
+        +~KeyBord()
+        ..
+        +void   add(string)
+        +Json   get()
+    }
+
+    class   UserActivity {
+        -mActivity : string
+        __
+        +UserActivity()
+        +~UserActivity()
+        ..
+        +void   set(string)
+        +Json   get()
+    }
+
+    class Request {
+        +mFrom : string
+        +mTo : string
+        +mTimestamp : size_t
+        +mRequestName : string
+        +mIP : string
+        +mCertificate : string
+        +mVariables : Event
+        +mSign : string
+        __
+        +Request()
+        +~Request()
+        ..
+        +bool   set(Json)
+        +Json  generate()
+    }
+}
+
+namespace Db {
+    class DbHandler {
+        +mInfo : string
+        __
+        +DbHandler()
+        +DbHandler(string)
+        +~DbHandler()
+        ..
+        +void   setInformation()
+        +bool   connect()
+        +void   disconnect()
+        +bool   push(Request)
+        +Request pop()
+    }
+}
+
+
+}
+
+@enduml

@@ -1,0 +1,148 @@
+\hypertarget{class_spider_1_1_event_1_1_keyboard}{}\section{Spider\+:\+:Event\+:\+:Keyboard Class Reference}
+\label{class_spider_1_1_event_1_1_keyboard}\index{Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}}
+
+
+\hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} Handler.  
+
+
+
+
+{\ttfamily \#include $<$Keyboard.\+hpp$>$}
+
+Inheritance diagram for Spider\+:\+:Event\+:\+:Keyboard\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_spider_1_1_event_1_1_keyboard}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spider_1_1_event_1_1_keyboard_a1fd20c190955bbe2856124e7f41dd8b7}{Keyboard} (const std\+::string \&activity)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_abe0da2633d327af5b491b02333616d65}\label{class_spider_1_1_event_1_1_keyboard_abe0da2633d327af5b491b02333616d65}} 
+\hyperlink{class_spider_1_1_event_1_1_keyboard_abe0da2633d327af5b491b02333616d65}{Keyboard} (const \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} \&)=delete
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} \& \hyperlink{class_spider_1_1_event_1_1_keyboard_a4b6e022f756523104222e71d1d59fd54}{operator=} (const \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} \&)=delete
+\begin{DoxyCompactList}\small\item\em Operator equal overlaod. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_a2b7799295335ac4bea0bc4c3089b7b50}\label{class_spider_1_1_event_1_1_keyboard_a2b7799295335ac4bea0bc4c3089b7b50}} 
+virtual \hyperlink{class_spider_1_1_event_1_1_keyboard_a2b7799295335ac4bea0bc4c3089b7b50}{$\sim$\+Keyboard} ()=default
+\begin{DoxyCompactList}\small\item\em Default destroyer. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{class_spider_1_1_event_1_1_keyboard_a3ea8239e9f2002ea2a4eb5dd0bbbb55a}{get\+Event\+Info} () const
+\begin{DoxyCompactList}\small\item\em Extract \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} information. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_spider_1_1_event_1_1_keyboard_aea1252251ac9ee1c7b71d0b0fcc7cc0a}{get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get id of the event. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1_event_1_1_keyboard_adde706a751b1df210bb459dcc33c05a8}{set\+Key} (int key)
+\begin{DoxyCompactList}\small\item\em save key catch by the keylogger \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1_event_1_1_keyboard_a3d89487e20e8ad9f2d0889e0c57858e5}{is\+Special\+Char} (int key)
+\begin{DoxyCompactList}\small\item\em check if the key catch is a special character \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} Handler. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_a1fd20c190955bbe2856124e7f41dd8b7}\label{class_spider_1_1_event_1_1_keyboard_a1fd20c190955bbe2856124e7f41dd8b7}} 
+\index{Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}!Keyboard@{Keyboard}}
+\index{Keyboard@{Keyboard}!Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{Keyboard()}{Keyboard()}}
+{\footnotesize\ttfamily Spider\+::\+Event\+::\+Keyboard\+::\+Keyboard (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{activity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last} & activity register \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_a3ea8239e9f2002ea2a4eb5dd0bbbb55a}\label{class_spider_1_1_event_1_1_keyboard_a3ea8239e9f2002ea2a4eb5dd0bbbb55a}} 
+\index{Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}!get\+Event\+Info@{get\+Event\+Info}}
+\index{get\+Event\+Info@{get\+Event\+Info}!Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{get\+Event\+Info()}{getEventInfo()}}
+{\footnotesize\ttfamily virtual std\+::string Spider\+::\+Event\+::\+Keyboard\+::get\+Event\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Extract \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} information. 
+
+\begin{DoxyReturn}{Returns}
+Informations into string format 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_spider_1_1_event_1_1_i_event_ac8471df73080237faea55de539d968a0}{Spider\+::\+Event\+::\+I\+Event}.
+
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_aea1252251ac9ee1c7b71d0b0fcc7cc0a}\label{class_spider_1_1_event_1_1_keyboard_aea1252251ac9ee1c7b71d0b0fcc7cc0a}} 
+\index{Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily virtual int Spider\+::\+Event\+::\+Keyboard\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get id of the event. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_spider_1_1_event_1_1_request}{Request} ID 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_spider_1_1_event_1_1_i_event_a902d1376faa8e5948fa5bfe8d7208c88}{Spider\+::\+Event\+::\+I\+Event}.
+
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_a3d89487e20e8ad9f2d0889e0c57858e5}\label{class_spider_1_1_event_1_1_keyboard_a3d89487e20e8ad9f2d0889e0c57858e5}} 
+\index{Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}!is\+Special\+Char@{is\+Special\+Char}}
+\index{is\+Special\+Char@{is\+Special\+Char}!Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{is\+Special\+Char()}{isSpecialChar()}}
+{\footnotesize\ttfamily bool Spider\+::\+Event\+::\+Keyboard\+::is\+Special\+Char (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+check if the key catch is a special character 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last} & key register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if it\textquotesingle{}s a special char, overwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_a4b6e022f756523104222e71d1d59fd54}\label{class_spider_1_1_event_1_1_keyboard_a4b6e022f756523104222e71d1d59fd54}} 
+\index{Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}!operator=@{operator=}}
+\index{operator=@{operator=}!Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard}\& Spider\+::\+Event\+::\+Keyboard\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Operator equal overlaod. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_keyboard_adde706a751b1df210bb459dcc33c05a8}\label{class_spider_1_1_event_1_1_keyboard_adde706a751b1df210bb459dcc33c05a8}} 
+\index{Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}!set\+Key@{set\+Key}}
+\index{set\+Key@{set\+Key}!Spider\+::\+Event\+::\+Keyboard@{Spider\+::\+Event\+::\+Keyboard}}
+\subsubsection{\texorpdfstring{set\+Key()}{setKey()}}
+{\footnotesize\ttfamily void Spider\+::\+Event\+::\+Keyboard\+::set\+Key (\begin{DoxyParamCaption}\item[{int}]{key }\end{DoxyParamCaption})}
+
+
+
+save key catch by the keylogger 
+
+
+\begin{DoxyParams}{Parameters}
+{\em last} & key register \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event/Keyboard.\+hpp\end{DoxyCompactItemize}

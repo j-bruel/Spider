@@ -1,0 +1,279 @@
+\hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys}{}\section{Spider\+:\+:ssl\+:\+:R\+S\+A\+Keys Class Reference}
+\label{class_spider_1_1ssl_1_1_r_s_a_keys}\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+
+
+Encapsulation of the open\+S\+SL one-\/way encryption system.  
+
+
+
+
+{\ttfamily \#include $<$R\+S\+A\+Keys.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a656fbf95f4ea432cbdbe40c4f0cb57f2}{R\+S\+A\+Keys} ()
+\begin{DoxyCompactList}\small\item\em R\+SA envelop keys. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a7a6fada6e8459ac0bcc20766f9083bd5}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a7a6fada6e8459ac0bcc20766f9083bd5}} 
+\hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a7a6fada6e8459ac0bcc20766f9083bd5}{R\+S\+A\+Keys} (const \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} \&)=delete
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a6dbecb26eadd6691d93a5f8d74ddce70}{R\+S\+A\+Keys} (const std\+::string \&path\+Private\+Key, const std\+::string path\+Public\+Key)
+\begin{DoxyCompactList}\small\item\em Create R\+SA keys with the two keys path. \end{DoxyCompactList}\item 
+\hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} \& \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_aa51f09af42c08d805e34bf351f478adc}{operator=} (const \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} \&)=delete
+\begin{DoxyCompactList}\small\item\em Equal operator overload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_ac602db5926f1318399bdc94b436c6c21}\label{class_spider_1_1ssl_1_1_r_s_a_keys_ac602db5926f1318399bdc94b436c6c21}} 
+\hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_ac602db5926f1318399bdc94b436c6c21}{$\sim$\+R\+S\+A\+Keys} ()
+\begin{DoxyCompactList}\small\item\em Default Destroyer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_acd779c58e9168d10fef5468015af063e}\label{class_spider_1_1ssl_1_1_r_s_a_keys_acd779c58e9168d10fef5468015af063e}} 
+void \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_acd779c58e9168d10fef5468015af063e}{generate} ()
+\begin{DoxyCompactList}\small\item\em Generate two keys (private and public) \end{DoxyCompactList}\item 
+R\+SA $\ast$ \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_afec6c4762821ae4179adebbef1e4ee66}{get\+Private} () const
+\begin{DoxyCompactList}\small\item\em Extract the private key from the \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} envelop. \end{DoxyCompactList}\item 
+R\+SA $\ast$ \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_afa3b28ea88c61b6ddf602e70843d6471}{get\+Public} () const
+\begin{DoxyCompactList}\small\item\em Extract the public key from the \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} envelop. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_ae9702fe70c7ec6ef761995dd0fbb6abf}{read\+Public\+Key} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Read and extract a public key from a file. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a9d177902b9051cd1b064b6597f3a3697}{read\+Private\+Key} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Read and extract a private key from a file. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a765563842f5a69b424d72cab3a77b678}{write} (F\+I\+LE $\ast$public\+Key, F\+I\+LE $\ast$private\+Key)
+\begin{DoxyCompactList}\small\item\em Print on stdout the public and private key. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_aabe857dba27e4cc8bd1d2a09b65082b8}{R\+S\+A\+Keys\+::convert\+Private} (std\+::string \&pub\+Key, std\+::string \&priv\+Key)
+\begin{DoxyCompactList}\small\item\em Convert the Private and public key into strings. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a9e391f7d87fe9a8f58119629ed80f9bb}{encrypt\+Public} (unsigned char $\ast$data, const size\+\_\+t \&clear\+Lenght, int \&crypted\+Lenght) const
+\begin{DoxyCompactList}\small\item\em Encrypt data from a public key. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a69c6bda29d2dbec830038b1d0ae92ab0}{encrypt\+Private} (unsigned char $\ast$data, const size\+\_\+t \&clear\+Lenght, int \&crypted\+Lenght) const
+\begin{DoxyCompactList}\small\item\em Encrypt data from a private key. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a9d981778deeb914140ea27e6144721b9}{decrypt\+Public} (unsigned char $\ast$data, size\+\_\+t lenght) const
+\begin{DoxyCompactList}\small\item\em Decrypt data from a public key. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys_a732ddcc62a20324b3ba10a765276220d}{decrypt\+Private} (unsigned char $\ast$data, size\+\_\+t lenght) const
+\begin{DoxyCompactList}\small\item\em Decrypt data from a private key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulation of the open\+S\+SL one-\/way encryption system. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a656fbf95f4ea432cbdbe40c4f0cb57f2}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a656fbf95f4ea432cbdbe40c4f0cb57f2}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!R\+S\+A\+Keys@{R\+S\+A\+Keys}}
+\index{R\+S\+A\+Keys@{R\+S\+A\+Keys}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{R\+S\+A\+Keys()}{RSAKeys()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Spider\+::ssl\+::\+R\+S\+A\+Keys\+::\+R\+S\+A\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+R\+SA envelop keys. 
+
+Default constructor \mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a6dbecb26eadd6691d93a5f8d74ddce70}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a6dbecb26eadd6691d93a5f8d74ddce70}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!R\+S\+A\+Keys@{R\+S\+A\+Keys}}
+\index{R\+S\+A\+Keys@{R\+S\+A\+Keys}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{R\+S\+A\+Keys()}{RSAKeys()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Spider\+::ssl\+::\+R\+S\+A\+Keys\+::\+R\+S\+A\+Keys (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+Private\+Key,  }\item[{const std\+::string}]{path\+Public\+Key }\end{DoxyParamCaption})}
+
+
+
+Create R\+SA keys with the two keys path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+Private\+Key} & Path to the private key \\
+\hline
+{\em path\+Public\+Key} & Path to the public key \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a732ddcc62a20324b3ba10a765276220d}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a732ddcc62a20324b3ba10a765276220d}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!decrypt\+Private@{decrypt\+Private}}
+\index{decrypt\+Private@{decrypt\+Private}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{decrypt\+Private()}{decryptPrivate()}}
+{\footnotesize\ttfamily unsigned char$\ast$ Spider\+::ssl\+::\+R\+S\+A\+Keys\+::decrypt\+Private (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{size\+\_\+t}]{lenght }\end{DoxyParamCaption}) const}
+
+
+
+Decrypt data from a private key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to decrypt \\
+\hline
+{\em lenght} & Lenght of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decrypted data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a9d981778deeb914140ea27e6144721b9}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a9d981778deeb914140ea27e6144721b9}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!decrypt\+Public@{decrypt\+Public}}
+\index{decrypt\+Public@{decrypt\+Public}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{decrypt\+Public()}{decryptPublic()}}
+{\footnotesize\ttfamily unsigned char$\ast$ Spider\+::ssl\+::\+R\+S\+A\+Keys\+::decrypt\+Public (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{size\+\_\+t}]{lenght }\end{DoxyParamCaption}) const}
+
+
+
+Decrypt data from a public key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to decrypt \\
+\hline
+{\em lenght} & Lenght of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decrypted data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a69c6bda29d2dbec830038b1d0ae92ab0}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a69c6bda29d2dbec830038b1d0ae92ab0}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!encrypt\+Private@{encrypt\+Private}}
+\index{encrypt\+Private@{encrypt\+Private}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{encrypt\+Private()}{encryptPrivate()}}
+{\footnotesize\ttfamily unsigned char$\ast$ Spider\+::ssl\+::\+R\+S\+A\+Keys\+::encrypt\+Private (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{const size\+\_\+t \&}]{clear\+Lenght,  }\item[{int \&}]{crypted\+Lenght }\end{DoxyParamCaption}) const}
+
+
+
+Encrypt data from a private key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to encrypt \\
+\hline
+{\em lenght} & Lenght of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encrypted data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a9e391f7d87fe9a8f58119629ed80f9bb}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a9e391f7d87fe9a8f58119629ed80f9bb}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!encrypt\+Public@{encrypt\+Public}}
+\index{encrypt\+Public@{encrypt\+Public}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{encrypt\+Public()}{encryptPublic()}}
+{\footnotesize\ttfamily unsigned char$\ast$ Spider\+::ssl\+::\+R\+S\+A\+Keys\+::encrypt\+Public (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{const size\+\_\+t \&}]{clear\+Lenght,  }\item[{int \&}]{crypted\+Lenght }\end{DoxyParamCaption}) const}
+
+
+
+Encrypt data from a public key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to encrypt \\
+\hline
+{\em lenght} & Lenght of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Encrypted data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_afec6c4762821ae4179adebbef1e4ee66}\label{class_spider_1_1ssl_1_1_r_s_a_keys_afec6c4762821ae4179adebbef1e4ee66}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!get\+Private@{get\+Private}}
+\index{get\+Private@{get\+Private}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{get\+Private()}{getPrivate()}}
+{\footnotesize\ttfamily R\+SA$\ast$ Spider\+::ssl\+::\+R\+S\+A\+Keys\+::get\+Private (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Extract the private key from the \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} envelop. 
+
+\begin{DoxyReturn}{Returns}
+Open\+S\+SL R\+SA type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_afa3b28ea88c61b6ddf602e70843d6471}\label{class_spider_1_1ssl_1_1_r_s_a_keys_afa3b28ea88c61b6ddf602e70843d6471}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!get\+Public@{get\+Public}}
+\index{get\+Public@{get\+Public}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{get\+Public()}{getPublic()}}
+{\footnotesize\ttfamily R\+SA$\ast$ Spider\+::ssl\+::\+R\+S\+A\+Keys\+::get\+Public (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Extract the public key from the \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} envelop. 
+
+\begin{DoxyReturn}{Returns}
+Open\+S\+SL R\+SA type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_aa51f09af42c08d805e34bf351f478adc}\label{class_spider_1_1ssl_1_1_r_s_a_keys_aa51f09af42c08d805e34bf351f478adc}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!operator=@{operator=}}
+\index{operator=@{operator=}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys}\& Spider\+::ssl\+::\+R\+S\+A\+Keys\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{R\+S\+A\+Keys} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Equal operator overload. 
+
+\begin{DoxyReturn}{Returns}
+R\+SA keys 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a9d177902b9051cd1b064b6597f3a3697}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a9d177902b9051cd1b064b6597f3a3697}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!read\+Private\+Key@{read\+Private\+Key}}
+\index{read\+Private\+Key@{read\+Private\+Key}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{read\+Private\+Key()}{readPrivateKey()}}
+{\footnotesize\ttfamily bool Spider\+::ssl\+::\+R\+S\+A\+Keys\+::read\+Private\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Read and extract a private key from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Key path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_ae9702fe70c7ec6ef761995dd0fbb6abf}\label{class_spider_1_1ssl_1_1_r_s_a_keys_ae9702fe70c7ec6ef761995dd0fbb6abf}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!read\+Public\+Key@{read\+Public\+Key}}
+\index{read\+Public\+Key@{read\+Public\+Key}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{read\+Public\+Key()}{readPublicKey()}}
+{\footnotesize\ttfamily bool Spider\+::ssl\+::\+R\+S\+A\+Keys\+::read\+Public\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Read and extract a public key from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Key path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Status function 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_aabe857dba27e4cc8bd1d2a09b65082b8}\label{class_spider_1_1ssl_1_1_r_s_a_keys_aabe857dba27e4cc8bd1d2a09b65082b8}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!R\+S\+A\+Keys\+::convert\+Private@{R\+S\+A\+Keys\+::convert\+Private}}
+\index{R\+S\+A\+Keys\+::convert\+Private@{R\+S\+A\+Keys\+::convert\+Private}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{R\+S\+A\+Keys\+::convert\+Private()}{RSAKeys::convertPrivate()}}
+{\footnotesize\ttfamily void Spider\+::ssl\+::\+R\+S\+A\+Keys\+::\+R\+S\+A\+Keys\+::convert\+Private (\begin{DoxyParamCaption}\item[{std\+::string \&}]{pub\+Key,  }\item[{std\+::string \&}]{priv\+Key }\end{DoxyParamCaption})}
+
+
+
+Convert the Private and public key into strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pub\+Key} & Ouput public key \\
+\hline
+{\em priv\+Key} & Ouput private key \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_r_s_a_keys_a765563842f5a69b424d72cab3a77b678}\label{class_spider_1_1ssl_1_1_r_s_a_keys_a765563842f5a69b424d72cab3a77b678}} 
+\index{Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}!write@{write}}
+\index{write@{write}!Spider\+::ssl\+::\+R\+S\+A\+Keys@{Spider\+::ssl\+::\+R\+S\+A\+Keys}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Spider\+::ssl\+::\+R\+S\+A\+Keys\+::write (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{public\+Key,  }\item[{F\+I\+LE $\ast$}]{private\+Key }\end{DoxyParamCaption})}
+
+
+
+Print on stdout the public and private key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em public\+Key} & F\+I\+LE type to Public Key \\
+\hline
+{\em private\+Key} & F\+I\+LE type to Private Key \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ssl/\hyperlink{_r_s_a_keys_8hpp}{R\+S\+A\+Keys.\+hpp}\end{DoxyCompactItemize}

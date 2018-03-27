@@ -1,0 +1,236 @@
+@startuml
+
+namespace Spider {
+
+interface SpiderException {
+    -mMsg : string
+    +SpiderException(string)
+    +~SpiderException()
+}
+
+SpiderException <|.. CoreException
+SpiderException <|.. SslException
+SpiderException <|.. DbException
+SpiderException <|.. NetworkException
+
+class CoreException {
+    +CoreException(string)
+    +~CoreException()
+}
+
+class SslException {
+    +SslException(string)
+    +~SslException()
+}
+
+class DbException {
+    +DbException(string)
+    +~DbException()
+}
+
+class NetworkException {
+    +NetworkException(string)
+    +~NetworkException()
+}
+
+namespace Db {
+
+    class DbHandler {
+        -mDb : sqlite3
+        -mRc : int
+        __
+        +DbHandler()
+        +~DbHandler()
+        ..
+        +bool   connect(string)
+        +void   disconnect()
+        +bool   push(Request)
+        +Request pop()
+        +void   deleteTable()
+        +void   showTable()
+    }
+
+}
+
+namespace Core {
+
+    class Spider {
+        +Spider()
+        +~Spider()
+        ..
+ 		+void	run()
+ 		..
+ 		-void	keyLogger(EventQueue)
+ 		-void   network(EventQueue)
+ 	}
+
+ 	class   KeyReader {
+ 	    -mSaveX : int
+ 	    -mSaveY : int
+ 	    -mOld : string
+ 	    -mActivity : string
+ 	    __
+ 	    +KeyReader()
+ 	    +~KeyReader()
+ 	    ..
+        +oid 	    read(EventQueue)
+        ..
+        -ClickType	isClick(int)
+        -ClickType	isMouseMove()
+        -bool		isInvalidKey(int)
+        -string	    findActivity()
+ 	}
+}
+
+namespace Event {
+
+    class   EventHandler {
+        -mHandler : DBHandler
+        __
+        +EventHandler()
+        +~EventHandler()
+        ..
+        +bool	handle(Event, RSAKeys)
+    }
+
+    class   EventQueue {
+        +mMutex : mutex
+        +mQueue : vector<Event>
+        +mIsSet : bool
+        __
+        +EventQueue()
+        +~EventQueue()
+        ..
+        +bool    isSet()
+        +void	changeStatus()
+        +void    push(Event)
+        +void	pop()
+        +bool	get(Event)
+    }
+
+    class   Request {
+        -mSize : size_t
+        +mRequestIdx: size_t
+        +mFrom : string		mFrom
+        +mTo : string		mTo
+        +mTimestamp : time_t		mTimestamp
+        +mEvent : IEvent
+        __
+        +Request()
+        +~Request()
+        ..
+        +string	generate(int, RSAKeys, bool)
+        ..
+        -string	createHeader(int, int);
+    }
+
+    interface IEvent {
+        +Event()
+        +~Event()
+        ..
+        +string    getEventInfo()
+    }
+
+    IEvent <|.. Click
+    IEvent <|.. KeyBord
+    IEvent <|.. UserActivity
+
+    class   Click {
+        -mPoint : ClickCoord
+        -mType : ClickType
+        __
+        +Click(ClickType, string)
+        +~Click()
+        ..
+        +string   getEventInfo()
+    }
+
+    class   KeyBord {
+        -mKeys : string
+        -mSpecialChar : map<int, string>
+        __
+        +KeyBord(string)
+        +~KeyBord()
+        ..
+        +string getEventInfo()
+        +void	setKey(int)
+        +bool	isSpecialChar(int)
+    }
+
+    class   UserActivity {
+        -mActivity : string
+        __
+        +UserActivity(string)
+        +~UserActivity()
+        ..
+        +string getEventInfo()
+    }
+
+	enum ClickType {
+		LEFT_CLICK,
+		MIDDLE_CLICK,
+		RIGHT_CLICK,
+		NONE
+	}
+
+}
+
+namespace ssl {
+
+    class AES {
+        -mKey : unsigned char[AES_BLOCK_SIZE]
+        __
+        +AES();
+  		+AES(AES);
+   		+AES(unsigned char *);
+        +AES     &operator=(AES);
+  		+~AES()
+  		..
+  		+void   generate()
+		+void   affect(unsigned char)
+		+void   clear()
+		+bool   isInitialize()
+		..
+        +unsigned char  *get()
+        ..
+        +bool   read(string)
+        +void   write(int)
+        ..
+        +string crypt(string)
+        +string uncrypt(string)
+    }
+
+    class sha {
+   		+Sha()
+  		+~Sha()
+  		..
+  		+unsigned char   *hash(char *, size_t)
+    }
+
+    class RSAKeys {
+		-mPublic : RSA
+		-mPrivate : RSA
+        -mRsa : RSA
+        __
+		+RSAKeys()
+		+RSAKeys(RSAKeys)
+		+RSAKeys(string, string);
+		+RSAKeys  &operator=(RSAKeys)
+		+~RSAKeys()
+		..
+		+void           generate()
+		+RSA            *getPrivate()
+        +RSA            *getPublic()
+		+bool           readPublicKey(string)
+		+bool           readPrivateKey(string)
+        +void           write(FILE, FILE)
+        +unsigned char  *encryptPublic(unsigned char, size_t)
+        +unsigned char  *encryptPrivate(unsigned char, size_t)
+        +unsigned char  *decryptPublic(unsigned char, size_t)
+        +unsigned char  *decryptPrivate(unsigned char, size_t)
+    }
+}
+
+}
+
+@enduml

@@ -1,0 +1,258 @@
+\hypertarget{classts_1_1common_1_1tcp_1_1_client_socket}{}\section{ts\+:\+:common\+:\+:tcp\+:\+:Client\+Socket Class Reference}
+\label{classts_1_1common_1_1tcp_1_1_client_socket}\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a2d03e028676bd5f58db35c92ebe42029}\label{classts_1_1common_1_1tcp_1_1_client_socket_a2d03e028676bd5f58db35c92ebe42029}} 
+{\bfseries Client\+Socket} (boost\+::asio\+::io\+\_\+service \&ios)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a0dda673c5f81c70c398c96a2a11ba152}{connect} (std\+::string const \&host, unsigned short port)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a6e852eb6629afd2fa253ccd3fd8a591a}{async\+Connect} (std\+::string const \&host, unsigned short port, On\+Connect\+Func on\+Connect)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a294447025579635cbfa7fe1829eb15a3}{close} ()
+\item 
+boost\+::asio\+::ip\+::tcp\+::socket \& \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a951aaa6937d4acd0020d30aa8481a485}{get\+Socket} ()
+\item 
+bool \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a654e7f9378b5143032c767486f1752f2}{is\+Connected} () const
+\item 
+size\+\_\+t \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_aa408490515485ebc5925685fa4cc4b93}{write} (void const $\ast$data, size\+\_\+t size)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_acab3419c27934c50c8020b255af1a3ee}{async\+Write} (void const $\ast$data, size\+\_\+t size, On\+Write\+Func on\+Write=nullptr)
+\item 
+size\+\_\+t \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a7876d2f81c6bf60f628973577dfabd2a}{read} (void $\ast$data, size\+\_\+t size)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_afea6b565d0621b6d19648c0259b85e95}{async\+Read} (void $\ast$data, size\+\_\+t size, On\+Read\+Func on\+Read=nullptr)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a0fdc353f373b36eba7096ca88b957842}{set\+On\+Read\+Callback} (On\+Read\+Func on\+Read)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a6dc4758bd4b328dec0ee8cbc1a39820b}{set\+On\+Write\+Callback} (On\+Write\+Func on\+Write)
+\item 
+void \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_aeb8c00f0828b0d61c0f2a4b1aa486ff4}{set\+On\+Connect\+Callback} (On\+Connect\+Func on\+Connect)
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_ae03a9e025ffc06eede204954a634a96e}\label{classts_1_1common_1_1tcp_1_1_client_socket_ae03a9e025ffc06eede204954a634a96e}} 
+void {\bfseries set\+On\+Disconnect\+Callback} (On\+Disconnect on\+Disconnect)
+\item 
+std\+::string const  \& \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a77d1bdcdd306a6487626ecbbdb4a0910}{get\+Address} ()
+\item 
+unsigned short \hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a3e17803779e94e89f3cda035a280d315}{get\+Port} ()
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a748fcc1565b851f1dd87dcf8c2d63057}\label{classts_1_1common_1_1tcp_1_1_client_socket_a748fcc1565b851f1dd87dcf8c2d63057}} 
+void {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a7d1a90e4e2f918b899315a68cc3edd55}\label{classts_1_1common_1_1tcp_1_1_client_socket_a7d1a90e4e2f918b899315a68cc3edd55}} 
+std\+::string {\bfseries get\+Info} ()
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_aed2b9b1b3d589aaef9476df1f0800a6c}\label{classts_1_1common_1_1tcp_1_1_client_socket_aed2b9b1b3d589aaef9476df1f0800a6c}} 
+void {\bfseries force\+Connection\+Status\+Has} (bool i)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_acb932dfbb7d1287af95c0f900563d8f7}\label{classts_1_1common_1_1tcp_1_1_client_socket_acb932dfbb7d1287af95c0f900563d8f7}} 
+boost\+::asio\+::io\+\_\+service \& {\bfseries m\+Ios}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a000d67633711815a8f2dc16acc9d2035}\label{classts_1_1common_1_1tcp_1_1_client_socket_a000d67633711815a8f2dc16acc9d2035}} 
+boost\+::asio\+::ip\+::tcp\+::socket {\bfseries m\+Socket}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_aeede5987e5beb49f60c14840e84fd4eb}\label{classts_1_1common_1_1tcp_1_1_client_socket_aeede5987e5beb49f60c14840e84fd4eb}} 
+bool {\bfseries m\+Is\+Connected}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a5ebac0ae9230a9659b486d43a8b27b9b}\label{classts_1_1common_1_1tcp_1_1_client_socket_a5ebac0ae9230a9659b486d43a8b27b9b}} 
+On\+Write\+Func {\bfseries m\+On\+Write}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a116da217aaa9c4b18a6d7eb17994b58d}\label{classts_1_1common_1_1tcp_1_1_client_socket_a116da217aaa9c4b18a6d7eb17994b58d}} 
+On\+Read\+Func {\bfseries m\+On\+Read}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a79c7916f52cd6b18935200e042d55483}\label{classts_1_1common_1_1tcp_1_1_client_socket_a79c7916f52cd6b18935200e042d55483}} 
+On\+Connect\+Func {\bfseries m\+On\+Connect}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a3e19605ebf2eac6fe9d1b7c0e2c51fa1}\label{classts_1_1common_1_1tcp_1_1_client_socket_a3e19605ebf2eac6fe9d1b7c0e2c51fa1}} 
+On\+Disconnect {\bfseries m\+On\+Disconnect}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_ad6ce1b1f3dfed87d9498610fcb75a5ef}\label{classts_1_1common_1_1tcp_1_1_client_socket_ad6ce1b1f3dfed87d9498610fcb75a5ef}} 
+std\+::string {\bfseries m\+Address}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a86914cea89264845b3e6f2b1213f48b5}\label{classts_1_1common_1_1tcp_1_1_client_socket_a86914cea89264845b3e6f2b1213f48b5}} 
+unsigned short {\bfseries m\+Port}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a6e852eb6629afd2fa253ccd3fd8a591a}\label{classts_1_1common_1_1tcp_1_1_client_socket_a6e852eb6629afd2fa253ccd3fd8a591a}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!async\+Connect@{async\+Connect}}
+\index{async\+Connect@{async\+Connect}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{async\+Connect()}{asyncConnect()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::async\+Connect (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{host,  }\item[{unsigned short}]{port,  }\item[{On\+Connect\+Func}]{on\+Connect }\end{DoxyParamCaption})}
+
+Connect the client to the server asynchronously 
+\begin{DoxyParams}{Parameters}
+{\em host} & \\
+\hline
+{\em port} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_afea6b565d0621b6d19648c0259b85e95}\label{classts_1_1common_1_1tcp_1_1_client_socket_afea6b565d0621b6d19648c0259b85e95}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!async\+Read@{async\+Read}}
+\index{async\+Read@{async\+Read}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{async\+Read()}{asyncRead()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::async\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{On\+Read\+Func}]{on\+Read = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Read data asynchronously 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+{\em on\+Read} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_acab3419c27934c50c8020b255af1a3ee}\label{classts_1_1common_1_1tcp_1_1_client_socket_acab3419c27934c50c8020b255af1a3ee}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!async\+Write@{async\+Write}}
+\index{async\+Write@{async\+Write}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{async\+Write()}{asyncWrite()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::async\+Write (\begin{DoxyParamCaption}\item[{void const $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{On\+Write\+Func}]{on\+Write = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Write data asynchronously 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+{\em on\+Write} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a294447025579635cbfa7fe1829eb15a3}\label{classts_1_1common_1_1tcp_1_1_client_socket_a294447025579635cbfa7fe1829eb15a3}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!close@{close}}
+\index{close@{close}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close the \hyperlink{classts_1_1_client}{Client} connection \mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a0dda673c5f81c70c398c96a2a11ba152}\label{classts_1_1common_1_1tcp_1_1_client_socket_a0dda673c5f81c70c398c96a2a11ba152}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!connect@{connect}}
+\index{connect@{connect}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::connect (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{host,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+Connect the client to the server 
+\begin{DoxyParams}{Parameters}
+{\em host} & \\
+\hline
+{\em port} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a77d1bdcdd306a6487626ecbbdb4a0910}\label{classts_1_1common_1_1tcp_1_1_client_socket_a77d1bdcdd306a6487626ecbbdb4a0910}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!get\+Address@{get\+Address}}
+\index{get\+Address@{get\+Address}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{get\+Address()}{getAddress()}}
+{\footnotesize\ttfamily std\+::string const\& ts\+::common\+::tcp\+::\+Client\+Socket\+::get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the address \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a3e17803779e94e89f3cda035a280d315}\label{classts_1_1common_1_1tcp_1_1_client_socket_a3e17803779e94e89f3cda035a280d315}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily unsigned short ts\+::common\+::tcp\+::\+Client\+Socket\+::get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the port \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a951aaa6937d4acd0020d30aa8481a485}\label{classts_1_1common_1_1tcp_1_1_client_socket_a951aaa6937d4acd0020d30aa8481a485}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!get\+Socket@{get\+Socket}}
+\index{get\+Socket@{get\+Socket}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{get\+Socket()}{getSocket()}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::socket\& ts\+::common\+::tcp\+::\+Client\+Socket\+::get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the Boost asio socket \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a654e7f9378b5143032c767486f1752f2}\label{classts_1_1common_1_1tcp_1_1_client_socket_a654e7f9378b5143032c767486f1752f2}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!is\+Connected@{is\+Connected}}
+\index{is\+Connected@{is\+Connected}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{is\+Connected()}{isConnected()}}
+{\footnotesize\ttfamily bool ts\+::common\+::tcp\+::\+Client\+Socket\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Check if the client is connect the server \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a7876d2f81c6bf60f628973577dfabd2a}\label{classts_1_1common_1_1tcp_1_1_client_socket_a7876d2f81c6bf60f628973577dfabd2a}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!read@{read}}
+\index{read@{read}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily size\+\_\+t ts\+::common\+::tcp\+::\+Client\+Socket\+::read (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Read data 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_aeb8c00f0828b0d61c0f2a4b1aa486ff4}\label{classts_1_1common_1_1tcp_1_1_client_socket_aeb8c00f0828b0d61c0f2a4b1aa486ff4}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!set\+On\+Connect\+Callback@{set\+On\+Connect\+Callback}}
+\index{set\+On\+Connect\+Callback@{set\+On\+Connect\+Callback}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{set\+On\+Connect\+Callback()}{setOnConnectCallback()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::set\+On\+Connect\+Callback (\begin{DoxyParamCaption}\item[{On\+Connect\+Func}]{on\+Connect }\end{DoxyParamCaption})}
+
+Set the callback for async\+Connect \begin{DoxySeeAlso}{See also}
+\hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_a6e852eb6629afd2fa253ccd3fd8a591a}{async\+Connect} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Connect} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a0fdc353f373b36eba7096ca88b957842}\label{classts_1_1common_1_1tcp_1_1_client_socket_a0fdc353f373b36eba7096ca88b957842}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!set\+On\+Read\+Callback@{set\+On\+Read\+Callback}}
+\index{set\+On\+Read\+Callback@{set\+On\+Read\+Callback}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{set\+On\+Read\+Callback()}{setOnReadCallback()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::set\+On\+Read\+Callback (\begin{DoxyParamCaption}\item[{On\+Read\+Func}]{on\+Read }\end{DoxyParamCaption})}
+
+Set the callback for async\+Read \begin{DoxySeeAlso}{See also}
+\hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_afea6b565d0621b6d19648c0259b85e95}{async\+Read} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Read} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_a6dc4758bd4b328dec0ee8cbc1a39820b}\label{classts_1_1common_1_1tcp_1_1_client_socket_a6dc4758bd4b328dec0ee8cbc1a39820b}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!set\+On\+Write\+Callback@{set\+On\+Write\+Callback}}
+\index{set\+On\+Write\+Callback@{set\+On\+Write\+Callback}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{set\+On\+Write\+Callback()}{setOnWriteCallback()}}
+{\footnotesize\ttfamily void ts\+::common\+::tcp\+::\+Client\+Socket\+::set\+On\+Write\+Callback (\begin{DoxyParamCaption}\item[{On\+Write\+Func}]{on\+Write }\end{DoxyParamCaption})}
+
+Set the callback for async\+Write \begin{DoxySeeAlso}{See also}
+\hyperlink{classts_1_1common_1_1tcp_1_1_client_socket_acab3419c27934c50c8020b255af1a3ee}{async\+Write} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Write} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1tcp_1_1_client_socket_aa408490515485ebc5925685fa4cc4b93}\label{classts_1_1common_1_1tcp_1_1_client_socket_aa408490515485ebc5925685fa4cc4b93}} 
+\index{ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}!write@{write}}
+\index{write@{write}!ts\+::common\+::tcp\+::\+Client\+Socket@{ts\+::common\+::tcp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily size\+\_\+t ts\+::common\+::tcp\+::\+Client\+Socket\+::write (\begin{DoxyParamCaption}\item[{void const $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Write data 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Socket/Tcp\+Client\+Socket.\+hpp\end{DoxyCompactItemize}

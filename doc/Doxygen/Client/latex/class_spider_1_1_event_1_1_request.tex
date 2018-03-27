@@ -1,0 +1,76 @@
+\hypertarget{class_spider_1_1_event_1_1_request}{}\section{Spider\+:\+:Event\+:\+:Request Class Reference}
+\label{class_spider_1_1_event_1_1_request}\index{Spider\+::\+Event\+::\+Request@{Spider\+::\+Event\+::\+Request}}
+
+
+\hyperlink{class_spider_1_1_event_1_1_request}{Request} informations container.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_ad141d09686cf9cdb1ecb9eba82b2710b}\label{class_spider_1_1_event_1_1_request_ad141d09686cf9cdb1ecb9eba82b2710b}} 
+\hyperlink{class_spider_1_1_event_1_1_request_ad141d09686cf9cdb1ecb9eba82b2710b}{Request} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_a65c49a1885b979b125adcbad72ab73ee}\label{class_spider_1_1_event_1_1_request_a65c49a1885b979b125adcbad72ab73ee}} 
+\hyperlink{class_spider_1_1_event_1_1_request_a65c49a1885b979b125adcbad72ab73ee}{Request} (const \hyperlink{class_spider_1_1_event_1_1_request}{Request} \&request)
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_aa6c13b33959dc082e00b9c872d41c84d}\label{class_spider_1_1_event_1_1_request_aa6c13b33959dc082e00b9c872d41c84d}} 
+\hyperlink{class_spider_1_1_event_1_1_request}{Request} \& \hyperlink{class_spider_1_1_event_1_1_request_aa6c13b33959dc082e00b9c872d41c84d}{operator=} (const \hyperlink{class_spider_1_1_event_1_1_request}{Request} \&request)=delete
+\begin{DoxyCompactList}\small\item\em Equal operator overload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_a7da7773ecc691187761673918cd7def2}\label{class_spider_1_1_event_1_1_request_a7da7773ecc691187761673918cd7def2}} 
+\hyperlink{class_spider_1_1_event_1_1_request_a7da7773ecc691187761673918cd7def2}{$\sim$\+Request} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_spider_1_1_event_1_1_request_adf63bc8d31f15530f110227b8827aabd}{generate} (int request\+Id, const \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{ssl\+::\+R\+S\+A\+Keys} \&rsa, bool is\+Crypt) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_spider_1_1_event_1_1_request}{Request} generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_a9fa54e719d09318f76a13abe503feba0}\label{class_spider_1_1_event_1_1_request_a9fa54e719d09318f76a13abe503feba0}} 
+size\+\_\+t \hyperlink{class_spider_1_1_event_1_1_request_a9fa54e719d09318f76a13abe503feba0}{m\+Request\+Idx}
+\begin{DoxyCompactList}\small\item\em Idx from the request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_aaa5e49fc54e2a9523b18788301ce43dc}\label{class_spider_1_1_event_1_1_request_aaa5e49fc54e2a9523b18788301ce43dc}} 
+std\+::string \hyperlink{class_spider_1_1_event_1_1_request_aaa5e49fc54e2a9523b18788301ce43dc}{m\+From}
+\begin{DoxyCompactList}\small\item\em Sender name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_a4077565fee9e0610f706c3e28adfc314}\label{class_spider_1_1_event_1_1_request_a4077565fee9e0610f706c3e28adfc314}} 
+std\+::string \hyperlink{class_spider_1_1_event_1_1_request_a4077565fee9e0610f706c3e28adfc314}{m\+To}
+\begin{DoxyCompactList}\small\item\em Receiver name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_a049065d188d2ece9a873b770c312355c}\label{class_spider_1_1_event_1_1_request_a049065d188d2ece9a873b770c312355c}} 
+std\+::time\+\_\+t \hyperlink{class_spider_1_1_event_1_1_request_a049065d188d2ece9a873b770c312355c}{m\+Timestamp}
+\begin{DoxyCompactList}\small\item\em Time where the package is create. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_a2d763ea57d53fe6b9cfd6b747fcc920e}\label{class_spider_1_1_event_1_1_request_a2d763ea57d53fe6b9cfd6b747fcc920e}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_spider_1_1_event_1_1_i_event}{Event\+::\+I\+Event} $>$ \hyperlink{class_spider_1_1_event_1_1_request_a2d763ea57d53fe6b9cfd6b747fcc920e}{m\+Event}
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_spider_1_1_event}{Event} of request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_spider_1_1_event_1_1_request}{Request} informations container. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_request_adf63bc8d31f15530f110227b8827aabd}\label{class_spider_1_1_event_1_1_request_adf63bc8d31f15530f110227b8827aabd}} 
+\index{Spider\+::\+Event\+::\+Request@{Spider\+::\+Event\+::\+Request}!generate@{generate}}
+\index{generate@{generate}!Spider\+::\+Event\+::\+Request@{Spider\+::\+Event\+::\+Request}}
+\subsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily std\+::string Spider\+::\+Event\+::\+Request\+::generate (\begin{DoxyParamCaption}\item[{int}]{request\+Id,  }\item[{const \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{ssl\+::\+R\+S\+A\+Keys} \&}]{rsa,  }\item[{bool}]{is\+Crypt }\end{DoxyParamCaption}) const}
+
+
+
+\hyperlink{class_spider_1_1_event_1_1_request}{Request} generator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request\+Id} & Id of the request to generate \\
+\hline
+{\em rsa} & R\+SA keys to crypt the data \\
+\hline
+{\em is\+Crypt} & Indicator to know if the request need to be crypted \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event/Request.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+@startuml
+
+namespace Spider {
+
+namespace ssl {
+
+    class AES {
+        -mKey : unsigned char[AES_BLOCK_SIZE]
+        __
+        +AES();
+  		+AES(AES);
+   		+AES(unsigned char *);
+        +AES     &operator=(AES);
+  		+~AES()
+  		..
+  		+void   generate()
+		+void   affect(unsigned char)
+		+void   clear()
+		+bool   isInitialize()
+		..
+        +unsigned char  *get()
+        ..
+        +bool   read(string)
+        +void   write(int)
+        ..
+        +string crypt(string)
+        +string uncrypt(string)
+    }
+
+    class sha {
+   		+Sha()
+  		+~Sha()
+  		..
+  		+unsigned char   *hash(char *, size_t)
+    }
+
+    class RSAKeys {
+		-mPublic : RSA
+		-mPrivate : RSA
+        -mRsa : RSA
+        __
+		+RSAKeys()
+		+RSAKeys(RSAKeys)
+		+RSAKeys(string, string);
+		+RSAKeys  &operator=(RSAKeys)
+		+~RSAKeys()
+		..
+		+void           generate()
+		+RSA            *getPrivate()
+        +RSA            *getPublic()
+		+bool           readPublicKey(string)
+		+bool           readPrivateKey(string)
+        +void           write(FILE, FILE)
+        +unsigned char  *encryptPublic(unsigned char, size_t)
+        +unsigned char  *encryptPrivate(unsigned char, size_t)
+        +unsigned char  *decryptPublic(unsigned char, size_t)
+        +unsigned char  *decryptPrivate(unsigned char, size_t)
+    }
+}
+
+}
+
+@enduml

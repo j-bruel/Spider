@@ -1,0 +1,71 @@
+\hypertarget{class_spider_1_1_d_b_1_1_d_b_handler}{}\section{Spider\+:\+:DB\+:\+:D\+B\+Handler Class Reference}
+\label{class_spider_1_1_d_b_1_1_d_b_handler}\index{Spider\+::\+D\+B\+::\+D\+B\+Handler@{Spider\+::\+D\+B\+::\+D\+B\+Handler}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a0f7f1767a084f374feb6ce414adde9c9}\label{class_spider_1_1_d_b_1_1_d_b_handler_a0f7f1767a084f374feb6ce414adde9c9}} 
+\hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a0f7f1767a084f374feb6ce414adde9c9}{D\+B\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Default \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler}{D\+B\+Handler} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a72a1ba5dbf9777dfb094e295bc9f08a4}\label{class_spider_1_1_d_b_1_1_d_b_handler_a72a1ba5dbf9777dfb094e295bc9f08a4}} 
+\hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a72a1ba5dbf9777dfb094e295bc9f08a4}{D\+B\+Handler} (const \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler}{D\+B\+Handler} \&)=delete
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a8f507845f01a1af5c83a5535e0529442}\label{class_spider_1_1_d_b_1_1_d_b_handler_a8f507845f01a1af5c83a5535e0529442}} 
+\hyperlink{class_spider_1_1_d_b_1_1_d_b_handler}{D\+B\+Handler} \& \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a8f507845f01a1af5c83a5535e0529442}{operator=} (const \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler}{D\+B\+Handler} \&)=delete
+\begin{DoxyCompactList}\small\item\em Equal operator overload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a86700944ee698f784de64c20e5bb6f86}\label{class_spider_1_1_d_b_1_1_d_b_handler_a86700944ee698f784de64c20e5bb6f86}} 
+\hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a86700944ee698f784de64c20e5bb6f86}{$\sim$\+D\+B\+Handler} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a139355686a0f6eca4b58d26332c9a5c7}{connect} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Connect fonction, create a data base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_af3c0ca362f8aa317a199d97d578d2506}\label{class_spider_1_1_d_b_1_1_d_b_handler_af3c0ca362f8aa317a199d97d578d2506}} 
+void \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_af3c0ca362f8aa317a199d97d578d2506}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em Disconnect the instance of data base previously create. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a12968ed2952aa4365d17733227bc4cdb}{push} (const \hyperlink{class_spider_1_1_event_1_1_request}{Event\+::\+Request} \&request)
+\begin{DoxyCompactList}\small\item\em Push a request in the data base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a76b1ef1bd0463caded154fd1400445f9}\label{class_spider_1_1_d_b_1_1_d_b_handler_a76b1ef1bd0463caded154fd1400445f9}} 
+void \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a76b1ef1bd0463caded154fd1400445f9}{pop} ()
+\begin{DoxyCompactList}\small\item\em delete the last element of the data base \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_ac518baf148ad74676cdcfd3d16d57263}\label{class_spider_1_1_d_b_1_1_d_b_handler_ac518baf148ad74676cdcfd3d16d57263}} 
+void \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_ac518baf148ad74676cdcfd3d16d57263}{delete\+Table} ()
+\begin{DoxyCompactList}\small\item\em Delete the spider table from the data base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a3068d47caf9cb45d72f3cd99530364f1}\label{class_spider_1_1_d_b_1_1_d_b_handler_a3068d47caf9cb45d72f3cd99530364f1}} 
+void \hyperlink{class_spider_1_1_d_b_1_1_d_b_handler_a3068d47caf9cb45d72f3cd99530364f1}{show\+Table} ()
+\begin{DoxyCompactList}\small\item\em Show all informations from the data base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a139355686a0f6eca4b58d26332c9a5c7}\label{class_spider_1_1_d_b_1_1_d_b_handler_a139355686a0f6eca4b58d26332c9a5c7}} 
+\index{Spider\+::\+D\+B\+::\+D\+B\+Handler@{Spider\+::\+D\+B\+::\+D\+B\+Handler}!connect@{connect}}
+\index{connect@{connect}!Spider\+::\+D\+B\+::\+D\+B\+Handler@{Spider\+::\+D\+B\+::\+D\+B\+Handler}}
+\subsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Spider\+::\+D\+B\+::\+D\+B\+Handler\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Connect fonction, create a data base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the futur data base \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spider_1_1_d_b_1_1_d_b_handler_a12968ed2952aa4365d17733227bc4cdb}\label{class_spider_1_1_d_b_1_1_d_b_handler_a12968ed2952aa4365d17733227bc4cdb}} 
+\index{Spider\+::\+D\+B\+::\+D\+B\+Handler@{Spider\+::\+D\+B\+::\+D\+B\+Handler}!push@{push}}
+\index{push@{push}!Spider\+::\+D\+B\+::\+D\+B\+Handler@{Spider\+::\+D\+B\+::\+D\+B\+Handler}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void Spider\+::\+D\+B\+::\+D\+B\+Handler\+::push (\begin{DoxyParamCaption}\item[{const \hyperlink{class_spider_1_1_event_1_1_request}{Event\+::\+Request} \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Push a request in the data base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & Request to push on the data base \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+B/\hyperlink{_d_b_handler_8hpp}{D\+B\+Handler.\+hpp}\end{DoxyCompactItemize}

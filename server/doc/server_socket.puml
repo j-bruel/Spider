@@ -1,0 +1,46 @@
+@startuml
+
+namespace ts::common {
+
+	namespace tcp {
+	    class ServerSocket {
+		    #mIos : boost::asio::io_service &
+		    #mAcceptor : boost::asio::ip::tcp::acceptor
+		    #mOnClientAccepted : OnClientAcceptedFunc
+
+		    +ServerSocket(boost::asio::io_service &ios)
+		    +~ServerSocket()
+		    +bind() : void
+		    +bind(unsigned short port) : void
+		    +bind(std::string const &host, unsigned short port) : void
+		    +enableReUseAddress() : void
+		    +listen(int backlog) : void
+		    +run() : void
+		    +stop() : void
+		    +asyncAccept(OnClientAcceptedFunc onClientAccepted) : void
+		    +boost::shared_ptr<Client> accept() : void
+		    +setOnClientAcceptedCallback(OnClientAcceptedFunc onClientAccepted) : void
+		    +getInfo() : std::string
+		    #startAsyncAccept() : void
+		    #createEndpointFromAddress(std::string const &host, unsigned short port) : boost::asio::ip::tcp::endpoint
+		    #getAddress() const : std::string
+		    getPort() const : unsigned short
+	    }
+	}
+
+	namespace udp {
+	    ServerSocket <|-- ClientSocket
+
+	    class ServerSocket {
+	    	+ServerSocket(boost::asio::io_service &ios)
+	    	+bind(std::string const &host, unsigned short port) : void
+	    	+run() : void
+		+stop() : void
+	    }
+	}
+
+
+
+}
+
+@enduml

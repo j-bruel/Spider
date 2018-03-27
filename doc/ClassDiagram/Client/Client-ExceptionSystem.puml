@@ -1,0 +1,38 @@
+@startuml
+
+namespace Spider {
+
+interface SpiderException {
+    -mMsg : string
+    +SpiderException(string)
+    +~SpiderException()
+}
+
+SpiderException <|.. CoreException
+SpiderException <|.. SslException
+SpiderException <|.. DbException
+SpiderException <|.. NetworkException
+
+class CoreException {
+    +CoreException(string)
+    +~CoreException()
+}
+
+class SslException {
+    +SslException(string)
+    +~SslException()
+}
+
+class DbException {
+    +DbException(string)
+    +~DbException()
+}
+
+class NetworkException {
+    +NetworkException(string)
+    +~NetworkException()
+}
+
+}
+
+@enduml

@@ -1,0 +1,67 @@
+\hypertarget{classts_1_1common_1_1_packet_manager}{}\section{ts\+:\+:common\+:\+:Packet\+Manager Class Reference}
+\label{classts_1_1common_1_1_packet_manager}\index{ts\+::common\+::\+Packet\+Manager@{ts\+::common\+::\+Packet\+Manager}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1_packet_manager_a3b73116e602124697590afecb82ef9fd}\label{classts_1_1common_1_1_packet_manager_a3b73116e602124697590afecb82ef9fd}} 
+{\bfseries Packet\+Manager} (\hyperlink{classts_1_1common_1_1tcp_1_1_client_socket}{common\+::tcp\+::\+Client\+Socket} \&client\+Socket)
+\item 
+void \hyperlink{classts_1_1common_1_1_packet_manager_a6165799da03af1c119d921ac96a24562}{async\+Read} (On\+Read\+Complete\+Packet on\+Read\+Complete\+Packet, On\+Read\+Packet\+Error on\+Read\+Packet\+Error)
+\item 
+void \hyperlink{classts_1_1common_1_1_packet_manager_ae308b816f8cf10367f0f63fa5c1fadf4}{async\+Write} (std\+::shared\+\_\+ptr$<$ \hyperlink{structts_1_1common_1_1_packet}{Packet} $>$ const \&packet, On\+Write\+Complete\+Packet on\+Write\+Complete\+Packet, On\+Write\+Packet\+Error on\+Write\+Packet\+Error)
+\item 
+void \hyperlink{classts_1_1common_1_1_packet_manager_aae446c8e99adc8ead7d4b0cd40545cd0}{send} (int packet\+Header\+Id, std\+::string const \&data, On\+Write\+Complete\+Packet on\+Write\+Complete\+Packet, On\+Write\+Packet\+Error on\+Write\+Packet\+Error)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classts_1_1common_1_1_packet_manager_a6165799da03af1c119d921ac96a24562}\label{classts_1_1common_1_1_packet_manager_a6165799da03af1c119d921ac96a24562}} 
+\index{ts\+::common\+::\+Packet\+Manager@{ts\+::common\+::\+Packet\+Manager}!async\+Read@{async\+Read}}
+\index{async\+Read@{async\+Read}!ts\+::common\+::\+Packet\+Manager@{ts\+::common\+::\+Packet\+Manager}}
+\subsubsection{\texorpdfstring{async\+Read()}{asyncRead()}}
+{\footnotesize\ttfamily void ts\+::common\+::\+Packet\+Manager\+::async\+Read (\begin{DoxyParamCaption}\item[{On\+Read\+Complete\+Packet}]{on\+Read\+Complete\+Packet,  }\item[{On\+Read\+Packet\+Error}]{on\+Read\+Packet\+Error }\end{DoxyParamCaption})}
+
+Read packet asynchronously 
+\begin{DoxyParams}{Parameters}
+{\em on\+Read\+Complete\+Packet} & \\
+\hline
+{\em on\+Read\+Packet\+Error} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1_packet_manager_ae308b816f8cf10367f0f63fa5c1fadf4}\label{classts_1_1common_1_1_packet_manager_ae308b816f8cf10367f0f63fa5c1fadf4}} 
+\index{ts\+::common\+::\+Packet\+Manager@{ts\+::common\+::\+Packet\+Manager}!async\+Write@{async\+Write}}
+\index{async\+Write@{async\+Write}!ts\+::common\+::\+Packet\+Manager@{ts\+::common\+::\+Packet\+Manager}}
+\subsubsection{\texorpdfstring{async\+Write()}{asyncWrite()}}
+{\footnotesize\ttfamily void ts\+::common\+::\+Packet\+Manager\+::async\+Write (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{structts_1_1common_1_1_packet}{Packet} $>$ const \&}]{packet,  }\item[{On\+Write\+Complete\+Packet}]{on\+Write\+Complete\+Packet,  }\item[{On\+Write\+Packet\+Error}]{on\+Write\+Packet\+Error }\end{DoxyParamCaption})}
+
+Write packet asynchronously 
+\begin{DoxyParams}{Parameters}
+{\em packet} & \\
+\hline
+{\em on\+Write\+Complete\+Packet} & \\
+\hline
+{\em on\+Write\+Packet\+Error} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1_packet_manager_aae446c8e99adc8ead7d4b0cd40545cd0}\label{classts_1_1common_1_1_packet_manager_aae446c8e99adc8ead7d4b0cd40545cd0}} 
+\index{ts\+::common\+::\+Packet\+Manager@{ts\+::common\+::\+Packet\+Manager}!send@{send}}
+\index{send@{send}!ts\+::common\+::\+Packet\+Manager@{ts\+::common\+::\+Packet\+Manager}}
+\subsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily void ts\+::common\+::\+Packet\+Manager\+::send (\begin{DoxyParamCaption}\item[{int}]{packet\+Header\+Id,  }\item[{std\+::string const \&}]{data,  }\item[{On\+Write\+Complete\+Packet}]{on\+Write\+Complete\+Packet,  }\item[{On\+Write\+Packet\+Error}]{on\+Write\+Packet\+Error }\end{DoxyParamCaption})}
+
+Helper for send packet easily 
+\begin{DoxyParams}{Parameters}
+{\em packet\+Header\+Id} & \\
+\hline
+{\em data} & \\
+\hline
+{\em on\+Write\+Complete\+Packet} & \\
+\hline
+{\em on\+Write\+Packet\+Error} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Packet/Packet\+Manager.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,101 @@
+\hypertarget{class_spider_1_1_event_1_1_click}{}\section{Spider\+:\+:Event\+:\+:Click Class Reference}
+\label{class_spider_1_1_event_1_1_click}\index{Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}}
+Inheritance diagram for Spider\+:\+:Event\+:\+:Click\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_spider_1_1_event_1_1_click}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spider_1_1_event_1_1_click_a81c8bc490c33205c434b0c2e8db4b6f5}{Click} (\hyperlink{namespace_spider_1_1_event_ae178d39ebb8937d04ffe6ead8f306fd0}{Click\+Type} type, const std\+::string \&activity)
+\begin{DoxyCompactList}\small\item\em Constructor with a Click\+Type. Save the mouse position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_click_ac6170505ba14c87d8c8c83f9c9cc7000}\label{class_spider_1_1_event_1_1_click_ac6170505ba14c87d8c8c83f9c9cc7000}} 
+\hyperlink{class_spider_1_1_event_1_1_click_ac6170505ba14c87d8c8c83f9c9cc7000}{Click} (const \hyperlink{class_spider_1_1_event_1_1_click}{Click} \&)=delete
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_spider_1_1_event_1_1_click}{Click} \& \hyperlink{class_spider_1_1_event_1_1_click_a857c3a0ca04ebce50cd170ec30e0a891}{operator=} (const \hyperlink{class_spider_1_1_event_1_1_click}{Click} \&)=delete
+\begin{DoxyCompactList}\small\item\em Operator equal overlaod. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_click_a83a5ae5f70a0519d131a53c0a9b9c366}\label{class_spider_1_1_event_1_1_click_a83a5ae5f70a0519d131a53c0a9b9c366}} 
+virtual \hyperlink{class_spider_1_1_event_1_1_click_a83a5ae5f70a0519d131a53c0a9b9c366}{$\sim$\+Click} ()=default
+\begin{DoxyCompactList}\small\item\em Default destroyer. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{class_spider_1_1_event_1_1_click_a916e746dc2145859f697de4d9f64cd00}{get\+Event\+Info} () const
+\begin{DoxyCompactList}\small\item\em Extract \hyperlink{namespace_spider_1_1_event}{Event} information. \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_spider_1_1_event_1_1_click_a32b810199a69b799589b680bfb9c287d}{get\+Id} () const
+\begin{DoxyCompactList}\small\item\em Get id of the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_click_a81c8bc490c33205c434b0c2e8db4b6f5}\label{class_spider_1_1_event_1_1_click_a81c8bc490c33205c434b0c2e8db4b6f5}} 
+\index{Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}!Click@{Click}}
+\index{Click@{Click}!Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}}
+\subsubsection{\texorpdfstring{Click()}{Click()}}
+{\footnotesize\ttfamily Spider\+::\+Event\+::\+Click\+::\+Click (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_spider_1_1_event_ae178d39ebb8937d04ffe6ead8f306fd0}{Click\+Type}}]{type,  }\item[{const std\+::string \&}]{activity }\end{DoxyParamCaption})}
+
+
+
+Constructor with a Click\+Type. Save the mouse position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & is the type of the click (left, middle or right) \\
+\hline
+{\em activity} & is the last activity register \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_click_a916e746dc2145859f697de4d9f64cd00}\label{class_spider_1_1_event_1_1_click_a916e746dc2145859f697de4d9f64cd00}} 
+\index{Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}!get\+Event\+Info@{get\+Event\+Info}}
+\index{get\+Event\+Info@{get\+Event\+Info}!Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}}
+\subsubsection{\texorpdfstring{get\+Event\+Info()}{getEventInfo()}}
+{\footnotesize\ttfamily virtual std\+::string Spider\+::\+Event\+::\+Click\+::get\+Event\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Extract \hyperlink{namespace_spider_1_1_event}{Event} information. 
+
+\begin{DoxyReturn}{Returns}
+Informations into string format 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_spider_1_1_event_1_1_i_event_ac8471df73080237faea55de539d968a0}{Spider\+::\+Event\+::\+I\+Event}.
+
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_click_a32b810199a69b799589b680bfb9c287d}\label{class_spider_1_1_event_1_1_click_a32b810199a69b799589b680bfb9c287d}} 
+\index{Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}}
+\subsubsection{\texorpdfstring{get\+Id()}{getId()}}
+{\footnotesize\ttfamily virtual int Spider\+::\+Event\+::\+Click\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Get id of the event. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_spider_1_1_event_1_1_request}{Request} ID 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_spider_1_1_event_1_1_i_event_a902d1376faa8e5948fa5bfe8d7208c88}{Spider\+::\+Event\+::\+I\+Event}.
+
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_click_a857c3a0ca04ebce50cd170ec30e0a891}\label{class_spider_1_1_event_1_1_click_a857c3a0ca04ebce50cd170ec30e0a891}} 
+\index{Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}!operator=@{operator=}}
+\index{operator=@{operator=}!Spider\+::\+Event\+::\+Click@{Spider\+::\+Event\+::\+Click}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_spider_1_1_event_1_1_click}{Click}\& Spider\+::\+Event\+::\+Click\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_spider_1_1_event_1_1_click}{Click} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Operator equal overlaod. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{namespace_spider_1_1_event}{Event} interface 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event/Click.\+hpp\end{DoxyCompactItemize}

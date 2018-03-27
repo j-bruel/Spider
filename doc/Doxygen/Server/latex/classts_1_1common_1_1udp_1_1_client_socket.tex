@@ -1,0 +1,177 @@
+\hypertarget{classts_1_1common_1_1udp_1_1_client_socket}{}\section{ts\+:\+:common\+:\+:udp\+:\+:Client\+Socket Class Reference}
+\label{classts_1_1common_1_1udp_1_1_client_socket}\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+Inheritance diagram for ts\+:\+:common\+:\+:udp\+:\+:Client\+Socket\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classts_1_1common_1_1udp_1_1_client_socket}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a74c773d6063b088437294998da8e7bb3}\label{classts_1_1common_1_1udp_1_1_client_socket_a74c773d6063b088437294998da8e7bb3}} 
+{\bfseries Client\+Socket} (boost\+::asio\+::io\+\_\+service \&ios)
+\item 
+void \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_ad58682dc83e4de4814efe73b7c3f8a03}{close} ()
+\item 
+boost\+::asio\+::ip\+::udp\+::socket \& \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_a6e7a4527ef58ebb10da1dc456d6ef3d2}{get\+Socket} ()
+\item 
+size\+\_\+t \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_a21b35f111813fe20dcd40f40c12c0f29}{send\+To} (const std\+::string \&host, unsigned short port, void const $\ast$data, size\+\_\+t size)
+\item 
+void \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_abe684b5395930b9e46cf1bd3cb8a9c32}{async\+Send\+To} (const std\+::string \&host, unsigned short port, void const $\ast$data, size\+\_\+t size, On\+Send\+To\+Func on\+Send\+To=nullptr)
+\item 
+size\+\_\+t \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_aebfe2f18331fbb67156c0d2ca479a0de}{receive\+From} (const std\+::string \&host, unsigned short port, void $\ast$data, size\+\_\+t size)
+\item 
+void \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_ae2789434073141d578f5fd740eb42068}{async\+Receive\+From} (const std\+::string \&host, unsigned short port, void $\ast$data, size\+\_\+t size, On\+Receive\+From\+Func on\+Receive\+From=nullptr)
+\item 
+void \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_a09aac85aca0ed8908e37d2b189ba6fc9}{set\+On\+Receive\+From\+Callback} (On\+Receive\+From\+Func on\+Receive\+From)
+\item 
+void \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_a04b10fcde4fa312582b02284a5dbdf6c}{set\+On\+Send\+To\+Callback} (On\+Send\+To\+Func on\+Send\+To)
+\item 
+std\+::string \hyperlink{classts_1_1common_1_1udp_1_1_client_socket_a812b9a0b3cd680dcc37bd708e46a4329}{get\+Address} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a60a04fec1d4d4f1be81bfb0a62539c07}\label{classts_1_1common_1_1udp_1_1_client_socket_a60a04fec1d4d4f1be81bfb0a62539c07}} 
+boost\+::asio\+::io\+\_\+service \& {\bfseries m\+Ios}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a7216f8d5c2346cb22cceb64371fe26f3}\label{classts_1_1common_1_1udp_1_1_client_socket_a7216f8d5c2346cb22cceb64371fe26f3}} 
+boost\+::asio\+::ip\+::udp\+::socket {\bfseries m\+Socket}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_aad7a08fec800008fd1e6602943ddfc8c}\label{classts_1_1common_1_1udp_1_1_client_socket_aad7a08fec800008fd1e6602943ddfc8c}} 
+On\+Send\+To\+Func {\bfseries m\+On\+Send\+To}
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_add732d15aa6129e1960e4e5addbe03a3}\label{classts_1_1common_1_1udp_1_1_client_socket_add732d15aa6129e1960e4e5addbe03a3}} 
+On\+Receive\+From\+Func {\bfseries m\+On\+Receive\+From}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_ae2789434073141d578f5fd740eb42068}\label{classts_1_1common_1_1udp_1_1_client_socket_ae2789434073141d578f5fd740eb42068}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!async\+Receive\+From@{async\+Receive\+From}}
+\index{async\+Receive\+From@{async\+Receive\+From}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{async\+Receive\+From()}{asyncReceiveFrom()}}
+{\footnotesize\ttfamily void ts\+::common\+::udp\+::\+Client\+Socket\+::async\+Receive\+From (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{unsigned short}]{port,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{On\+Receive\+From\+Func}]{on\+Receive\+From = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+receive data asynchronously 
+\begin{DoxyParams}{Parameters}
+{\em host} & \\
+\hline
+{\em port} & \\
+\hline
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+{\em on\+Receive\+From} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_abe684b5395930b9e46cf1bd3cb8a9c32}\label{classts_1_1common_1_1udp_1_1_client_socket_abe684b5395930b9e46cf1bd3cb8a9c32}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!async\+Send\+To@{async\+Send\+To}}
+\index{async\+Send\+To@{async\+Send\+To}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{async\+Send\+To()}{asyncSendTo()}}
+{\footnotesize\ttfamily void ts\+::common\+::udp\+::\+Client\+Socket\+::async\+Send\+To (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{unsigned short}]{port,  }\item[{void const $\ast$}]{data,  }\item[{size\+\_\+t}]{size,  }\item[{On\+Send\+To\+Func}]{on\+Send\+To = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+send data asynchronously 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+{\em on\+Write} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_ad58682dc83e4de4814efe73b7c3f8a03}\label{classts_1_1common_1_1udp_1_1_client_socket_ad58682dc83e4de4814efe73b7c3f8a03}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!close@{close}}
+\index{close@{close}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void ts\+::common\+::udp\+::\+Client\+Socket\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Close the \hyperlink{classts_1_1_client}{Client} connection \mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a812b9a0b3cd680dcc37bd708e46a4329}\label{classts_1_1common_1_1udp_1_1_client_socket_a812b9a0b3cd680dcc37bd708e46a4329}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!get\+Address@{get\+Address}}
+\index{get\+Address@{get\+Address}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{get\+Address()}{getAddress()}}
+{\footnotesize\ttfamily std\+::string ts\+::common\+::udp\+::\+Client\+Socket\+::get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Return the address \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a6e7a4527ef58ebb10da1dc456d6ef3d2}\label{classts_1_1common_1_1udp_1_1_client_socket_a6e7a4527ef58ebb10da1dc456d6ef3d2}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!get\+Socket@{get\+Socket}}
+\index{get\+Socket@{get\+Socket}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{get\+Socket()}{getSocket()}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::udp\+::socket\& ts\+::common\+::udp\+::\+Client\+Socket\+::get\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the Boost asio socket \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_aebfe2f18331fbb67156c0d2ca479a0de}\label{classts_1_1common_1_1udp_1_1_client_socket_aebfe2f18331fbb67156c0d2ca479a0de}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!receive\+From@{receive\+From}}
+\index{receive\+From@{receive\+From}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{receive\+From()}{receiveFrom()}}
+{\footnotesize\ttfamily size\+\_\+t ts\+::common\+::udp\+::\+Client\+Socket\+::receive\+From (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{unsigned short}]{port,  }\item[{void $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+receive data 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a21b35f111813fe20dcd40f40c12c0f29}\label{classts_1_1common_1_1udp_1_1_client_socket_a21b35f111813fe20dcd40f40c12c0f29}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!send\+To@{send\+To}}
+\index{send\+To@{send\+To}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{send\+To()}{sendTo()}}
+{\footnotesize\ttfamily size\+\_\+t ts\+::common\+::udp\+::\+Client\+Socket\+::send\+To (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{unsigned short}]{port,  }\item[{void const $\ast$}]{data,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})}
+
+Send data 
+\begin{DoxyParams}{Parameters}
+{\em host} & \\
+\hline
+{\em port} & \\
+\hline
+{\em data} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a09aac85aca0ed8908e37d2b189ba6fc9}\label{classts_1_1common_1_1udp_1_1_client_socket_a09aac85aca0ed8908e37d2b189ba6fc9}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!set\+On\+Receive\+From\+Callback@{set\+On\+Receive\+From\+Callback}}
+\index{set\+On\+Receive\+From\+Callback@{set\+On\+Receive\+From\+Callback}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{set\+On\+Receive\+From\+Callback()}{setOnReceiveFromCallback()}}
+{\footnotesize\ttfamily void ts\+::common\+::udp\+::\+Client\+Socket\+::set\+On\+Receive\+From\+Callback (\begin{DoxyParamCaption}\item[{On\+Receive\+From\+Func}]{on\+Receive\+From }\end{DoxyParamCaption})}
+
+Set the callback for async\+Receive\+From \begin{DoxySeeAlso}{See also}
+\hyperlink{classts_1_1common_1_1udp_1_1_client_socket_ae2789434073141d578f5fd740eb42068}{async\+Receive\+From} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Receive\+From} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1udp_1_1_client_socket_a04b10fcde4fa312582b02284a5dbdf6c}\label{classts_1_1common_1_1udp_1_1_client_socket_a04b10fcde4fa312582b02284a5dbdf6c}} 
+\index{ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}!set\+On\+Send\+To\+Callback@{set\+On\+Send\+To\+Callback}}
+\index{set\+On\+Send\+To\+Callback@{set\+On\+Send\+To\+Callback}!ts\+::common\+::udp\+::\+Client\+Socket@{ts\+::common\+::udp\+::\+Client\+Socket}}
+\subsubsection{\texorpdfstring{set\+On\+Send\+To\+Callback()}{setOnSendToCallback()}}
+{\footnotesize\ttfamily void ts\+::common\+::udp\+::\+Client\+Socket\+::set\+On\+Send\+To\+Callback (\begin{DoxyParamCaption}\item[{On\+Send\+To\+Func}]{on\+Send\+To }\end{DoxyParamCaption})}
+
+Set the callback for async\+Send\+To \begin{DoxySeeAlso}{See also}
+\hyperlink{classts_1_1common_1_1udp_1_1_client_socket_abe684b5395930b9e46cf1bd3cb8a9c32}{async\+Send\+To} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em on\+Receive\+From} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Socket/Udp\+Client\+Socket.\+hpp\end{DoxyCompactItemize}

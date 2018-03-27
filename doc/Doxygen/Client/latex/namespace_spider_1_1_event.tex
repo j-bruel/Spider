@@ -1,0 +1,56 @@
+\hypertarget{namespace_spider_1_1_event}{}\section{Spider\+:\+:Event Namespace Reference}
+\label{namespace_spider_1_1_event}\index{Spider\+::\+Event@{Spider\+::\+Event}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_spider_1_1_event_1_1_click}{Click}
+\item 
+struct \hyperlink{struct_spider_1_1_event_1_1_click_coord}{Click\+Coord}
+\begin{DoxyCompactList}\small\item\em Define the click coordonate. \end{DoxyCompactList}\item 
+class \hyperlink{class_spider_1_1_event_1_1_event_handler}{Event\+Handler}
+\begin{DoxyCompactList}\small\item\em Handle events. \end{DoxyCompactList}\item 
+class \hyperlink{class_spider_1_1_event_1_1_event_queue}{Event\+Queue}
+\begin{DoxyCompactList}\small\item\em Queue system for \hyperlink{namespace_spider}{Spider} events. \end{DoxyCompactList}\item 
+class \hyperlink{class_spider_1_1_event_1_1_i_event}{I\+Event}
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespace_spider_1_1_event}{Event} interface. \end{DoxyCompactList}\item 
+class \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_spider_1_1_event_1_1_keyboard}{Keyboard} Handler. \end{DoxyCompactList}\item 
+class \hyperlink{class_spider_1_1_event_1_1_request}{Request}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_spider_1_1_event_1_1_request}{Request} informations container. \end{DoxyCompactList}\item 
+class \hyperlink{class_spider_1_1_event_1_1_user_activity}{User\+Activity}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_spider_1_1_event_1_1_user_activity}{User\+Activity} Handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespace_spider_1_1_event_ae178d39ebb8937d04ffe6ead8f306fd0}\label{namespace_spider_1_1_event_ae178d39ebb8937d04ffe6ead8f306fd0}} 
+enum \hyperlink{namespace_spider_1_1_event_ae178d39ebb8937d04ffe6ead8f306fd0}{Click\+Type} \{ {\bfseries L\+E\+F\+T\+\_\+\+C\+L\+I\+CK}, 
+{\bfseries M\+I\+D\+D\+L\+E\+\_\+\+C\+L\+I\+CK}, 
+{\bfseries R\+I\+G\+H\+T\+\_\+\+C\+L\+I\+CK}, 
+{\bfseries N\+O\+NE}
+ \}\begin{DoxyCompactList}\small\item\em Define the type of the click from the user. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ int, \hyperlink{namespace_spider_1_1_event_ae178d39ebb8937d04ffe6ead8f306fd0}{Event\+::\+Click\+Type} $>$ {\bfseries associative\+Click}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_spider_1_1_event}{Event} 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespace_spider_1_1_event_a18a7153c12e999d71c1490dbc9c464d8}\label{namespace_spider_1_1_event_a18a7153c12e999d71c1490dbc9c464d8}} 
+\index{Spider\+::\+Event@{Spider\+::\+Event}!associative\+Click@{associative\+Click}}
+\index{associative\+Click@{associative\+Click}!Spider\+::\+Event@{Spider\+::\+Event}}
+\subsubsection{\texorpdfstring{associative\+Click}{associativeClick}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$int, \hyperlink{namespace_spider_1_1_event_ae178d39ebb8937d04ffe6ead8f306fd0}{Event\+::\+Click\+Type}$>$ Spider\+::\+Event\+::associative\+Click}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \{ VK\_LBUTTON, Event::LEFT\_CLICK \},
+        \{ VK\_MBUTTON, Event::MIDDLE\_CLICK \},
+        \{ VK\_RBUTTON, Event::RIGHT\_CLICK \}
+    \}
+\end{DoxyCode}

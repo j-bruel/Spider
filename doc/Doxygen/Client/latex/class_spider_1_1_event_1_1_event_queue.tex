@@ -1,0 +1,109 @@
+\hypertarget{class_spider_1_1_event_1_1_event_queue}{}\section{Spider\+:\+:Event\+:\+:Event\+Queue Class Reference}
+\label{class_spider_1_1_event_1_1_event_queue}\index{Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}}
+
+
+Queue system for \hyperlink{namespace_spider}{Spider} events.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Queue.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_a779a34719216dfbbb9db9ce8799e830f}\label{class_spider_1_1_event_1_1_event_queue_a779a34719216dfbbb9db9ce8799e830f}} 
+\hyperlink{class_spider_1_1_event_1_1_event_queue_a779a34719216dfbbb9db9ce8799e830f}{Event\+Queue} ()
+\begin{DoxyCompactList}\small\item\em Default \hyperlink{class_spider_1_1_event_1_1_event_queue}{Event\+Queue} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_a5fb2a3bef9b1b6adc97b966fa64d3c5e}\label{class_spider_1_1_event_1_1_event_queue_a5fb2a3bef9b1b6adc97b966fa64d3c5e}} 
+\hyperlink{class_spider_1_1_event_1_1_event_queue_a5fb2a3bef9b1b6adc97b966fa64d3c5e}{Event\+Queue} (const \hyperlink{class_spider_1_1_event_1_1_event_queue}{Event\+Queue} \&)=delete
+\begin{DoxyCompactList}\small\item\em Default Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_a4a03f4073c2920cb0ee2b83f890bedfd}\label{class_spider_1_1_event_1_1_event_queue_a4a03f4073c2920cb0ee2b83f890bedfd}} 
+\hyperlink{class_spider_1_1_event_1_1_event_queue}{Event\+Queue} \& \hyperlink{class_spider_1_1_event_1_1_event_queue_a4a03f4073c2920cb0ee2b83f890bedfd}{operator=} (const \hyperlink{class_spider_1_1_event_1_1_event_queue}{Event\+Queue} \&)=delete
+\begin{DoxyCompactList}\small\item\em Equal operator overload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_abc1f2a5b3d1991b51084bcf220f18546}\label{class_spider_1_1_event_1_1_event_queue_abc1f2a5b3d1991b51084bcf220f18546}} 
+\hyperlink{class_spider_1_1_event_1_1_event_queue_abc1f2a5b3d1991b51084bcf220f18546}{$\sim$\+Event\+Queue} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1_event_1_1_event_queue_a99fe9f809cb314a0516dcd4fab4f4b20}{is\+Set} () const
+\begin{DoxyCompactList}\small\item\em Check if the queue is set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_acabae5a89986f14ba821bb0f8a1fc0eb}\label{class_spider_1_1_event_1_1_event_queue_acabae5a89986f14ba821bb0f8a1fc0eb}} 
+void \hyperlink{class_spider_1_1_event_1_1_event_queue_acabae5a89986f14ba821bb0f8a1fc0eb}{change\+Status} ()
+\begin{DoxyCompactList}\small\item\em Change the setting status of the queue system. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1_event_1_1_event_queue_a978f4bd1835a93fccee1d8b04a547509}{push} (\hyperlink{class_spider_1_1_event_1_1_i_event}{I\+Event} $\ast$event)
+\begin{DoxyCompactList}\small\item\em Push a event in the queue. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1_event_1_1_event_queue_a6946c1cc04ef2b83aaa84f70d1721a30}{pop} ()
+\begin{DoxyCompactList}\small\item\em Pop a event in the queue. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1_event_1_1_event_queue_a3e14657755e1b44465008a73430b0b64}{get} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_spider_1_1_event_1_1_i_event}{I\+Event} $>$ \&event)
+\begin{DoxyCompactList}\small\item\em Extract the lastest event of the queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Queue system for \hyperlink{namespace_spider}{Spider} events. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_a3e14657755e1b44465008a73430b0b64}\label{class_spider_1_1_event_1_1_event_queue_a3e14657755e1b44465008a73430b0b64}} 
+\index{Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}!get@{get}}
+\index{get@{get}!Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily bool Spider\+::\+Event\+::\+Event\+Queue\+::get (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{class_spider_1_1_event_1_1_i_event}{I\+Event} $>$ \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Extract the lastest event of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Futur extract event \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State of the method\+: Success or Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_a99fe9f809cb314a0516dcd4fab4f4b20}\label{class_spider_1_1_event_1_1_event_queue_a99fe9f809cb314a0516dcd4fab4f4b20}} 
+\index{Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}!is\+Set@{is\+Set}}
+\index{is\+Set@{is\+Set}!Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}}
+\subsubsection{\texorpdfstring{is\+Set()}{isSet()}}
+{\footnotesize\ttfamily bool Spider\+::\+Event\+::\+Event\+Queue\+::is\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if the queue is set. 
+
+\begin{DoxyReturn}{Returns}
+State of the method\+: Success or Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_a6946c1cc04ef2b83aaa84f70d1721a30}\label{class_spider_1_1_event_1_1_event_queue_a6946c1cc04ef2b83aaa84f70d1721a30}} 
+\index{Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}!pop@{pop}}
+\index{pop@{pop}!Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void Spider\+::\+Event\+::\+Event\+Queue\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pop a event in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \hyperlink{namespace_spider_1_1_event}{Event} to pop of the queue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_queue_a978f4bd1835a93fccee1d8b04a547509}\label{class_spider_1_1_event_1_1_event_queue_a978f4bd1835a93fccee1d8b04a547509}} 
+\index{Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}!push@{push}}
+\index{push@{push}!Spider\+::\+Event\+::\+Event\+Queue@{Spider\+::\+Event\+::\+Event\+Queue}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void Spider\+::\+Event\+::\+Event\+Queue\+::push (\begin{DoxyParamCaption}\item[{\hyperlink{class_spider_1_1_event_1_1_i_event}{I\+Event} $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Push a event in the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \hyperlink{namespace_spider_1_1_event}{Event} to push on the queue \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event/\hyperlink{_event_queue_8hpp}{Event\+Queue.\+hpp}\end{DoxyCompactItemize}

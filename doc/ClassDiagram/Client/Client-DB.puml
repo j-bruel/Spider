@@ -1,0 +1,25 @@
+@startuml
+
+namespace Spider {
+
+namespace Db {
+
+    class DbHandler {
+        -mDb : sqlite3
+        -mRc : int
+        __
+        +DbHandler()
+        +~DbHandler()
+        ..
+        +bool   connect(string)
+        +void   disconnect()
+        +bool   push(Request)
+        +Request pop()
+        +void   deleteTable()
+        +void   showTable()
+    }
+
+}
+}
+
+@enduml

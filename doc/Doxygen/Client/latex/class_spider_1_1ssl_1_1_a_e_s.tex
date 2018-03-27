@@ -1,0 +1,255 @@
+\hypertarget{class_spider_1_1ssl_1_1_a_e_s}{}\section{Spider\+:\+:ssl\+:\+:A\+ES Class Reference}
+\label{class_spider_1_1ssl_1_1_a_e_s}\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+
+
+Encapsulation of the open\+S\+SL \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} system.  
+
+
+
+
+{\ttfamily \#include $<$A\+E\+S.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a8eaa642dde56e252f2a88428fc3964af}\label{class_spider_1_1ssl_1_1_a_e_s_a8eaa642dde56e252f2a88428fc3964af}} 
+\hyperlink{class_spider_1_1ssl_1_1_a_e_s_a8eaa642dde56e252f2a88428fc3964af}{A\+ES} ()
+\begin{DoxyCompactList}\small\item\em Default \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} Class Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_spider_1_1ssl_1_1_a_e_s_a9da7fa808bebcdb3042322a371473069}{A\+ES} (const \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} \&key)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} class copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_spider_1_1ssl_1_1_a_e_s_ae588c5d1794e8cbe1cc74cf4ffc8b276}{A\+ES} (const unsigned char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Constructor that automatically loads a key from its path and is type. \end{DoxyCompactList}\item 
+\hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} \& \hyperlink{class_spider_1_1ssl_1_1_a_e_s_a46a15236249277adc1b4b1961985d2bf}{operator=} (const \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} \&key)
+\begin{DoxyCompactList}\small\item\em Copy Operator, copy a key. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1ssl_1_1_a_e_s_ad9014e425e6149e7006b8b309a933bc2}{operator==} (const \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} \&key) const
+\begin{DoxyCompactList}\small\item\em Equal operator, allows to know if two keys are equal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_aab6bae111d14ed5ec7fe0cefbb8ba3cc}\label{class_spider_1_1ssl_1_1_a_e_s_aab6bae111d14ed5ec7fe0cefbb8ba3cc}} 
+\hyperlink{class_spider_1_1ssl_1_1_a_e_s_aab6bae111d14ed5ec7fe0cefbb8ba3cc}{$\sim$\+A\+ES} ()
+\begin{DoxyCompactList}\small\item\em Default Destroyer. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1ssl_1_1_a_e_s_a3cba36653117622e01fedfafa9fb1c6a}{generate} ()
+\begin{DoxyCompactList}\small\item\em Generates a new internal key of the class. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1ssl_1_1_a_e_s_a16b092b57a8906edc6845176eed10256}{affect} (const unsigned char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Assigns a key to the instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_aa6c03237be40637cae04f0ec9161bc79}\label{class_spider_1_1ssl_1_1_a_e_s_aa6c03237be40637cae04f0ec9161bc79}} 
+void \hyperlink{class_spider_1_1ssl_1_1_a_e_s_aa6c03237be40637cae04f0ec9161bc79}{clear} ()
+\begin{DoxyCompactList}\small\item\em Removes the key without destroying the object. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1ssl_1_1_a_e_s_a93e682bc36f5a52d75289fd43c2404f6}{is\+Initialize} () const
+\begin{DoxyCompactList}\small\item\em Whether the key is initialized or not. \end{DoxyCompactList}\item 
+unsigned char $\ast$ \hyperlink{class_spider_1_1ssl_1_1_a_e_s_af29f6f29119e34fcf27605ed85a3460d}{get} ()
+\begin{DoxyCompactList}\small\item\em Extract the key from the class. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1ssl_1_1_a_e_s_a9ed853ba70dba93ed28523a9dcd52d72}{read} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Read \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} key in a file. \end{DoxyCompactList}\item 
+void \hyperlink{class_spider_1_1ssl_1_1_a_e_s_ac4c9691e1fd1c250343ebe8206f26026}{write} (int fd)
+\begin{DoxyCompactList}\small\item\em Write the key in a specific file director. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_spider_1_1ssl_1_1_a_e_s_a035de929280e43fed57eb5bbadab394f}{crypt} (const std\+::string \&data) const
+\begin{DoxyCompactList}\small\item\em Encrypts data from a class key. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_spider_1_1ssl_1_1_a_e_s_a187c229df6c9e59b44c6148f5eac6177}{uncrypt} (const std\+::string \&data) const
+\begin{DoxyCompactList}\small\item\em Decrypts data from class A\+E\+S\+Key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Encapsulation of the open\+S\+SL \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} system. 
+
+\begin{DoxyWarning}{Warning}
+The \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} key to a size defined by the open\+S\+Sl (A\+E\+S\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+I\+ZE) 
+\end{DoxyWarning}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a9da7fa808bebcdb3042322a371473069}\label{class_spider_1_1ssl_1_1_a_e_s_a9da7fa808bebcdb3042322a371473069}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!A\+ES@{A\+ES}}
+\index{A\+ES@{A\+ES}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{A\+E\+S()}{AES()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Spider\+::ssl\+::\+A\+E\+S\+::\+A\+ES (\begin{DoxyParamCaption}\item[{const \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} \&}]{key }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} class copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key that will be copied \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_ae588c5d1794e8cbe1cc74cf4ffc8b276}\label{class_spider_1_1ssl_1_1_a_e_s_ae588c5d1794e8cbe1cc74cf4ffc8b276}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!A\+ES@{A\+ES}}
+\index{A\+ES@{A\+ES}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{A\+E\+S()}{AES()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Spider\+::ssl\+::\+A\+E\+S\+::\+A\+ES (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{key }\end{DoxyParamCaption})}
+
+
+
+Constructor that automatically loads a key from its path and is type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Key in the form of a string \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a16b092b57a8906edc6845176eed10256}\label{class_spider_1_1ssl_1_1_a_e_s_a16b092b57a8906edc6845176eed10256}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!affect@{affect}}
+\index{affect@{affect}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{affect()}{affect()}}
+{\footnotesize\ttfamily void Spider\+::ssl\+::\+A\+E\+S\+::affect (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Assigns a key to the instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Reference key to be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a035de929280e43fed57eb5bbadab394f}\label{class_spider_1_1ssl_1_1_a_e_s_a035de929280e43fed57eb5bbadab394f}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!crypt@{crypt}}
+\index{crypt@{crypt}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{crypt()}{crypt()}}
+{\footnotesize\ttfamily std\+::string Spider\+::ssl\+::\+A\+E\+S\+::crypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Encrypts data from a class key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to encrypt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Data encrypted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a3cba36653117622e01fedfafa9fb1c6a}\label{class_spider_1_1ssl_1_1_a_e_s_a3cba36653117622e01fedfafa9fb1c6a}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!generate@{generate}}
+\index{generate@{generate}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily void Spider\+::ssl\+::\+A\+E\+S\+::generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Generates a new internal key of the class. 
+
+\begin{DoxyReturn}{Returns}
+State of the method\+: Success or Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_af29f6f29119e34fcf27605ed85a3460d}\label{class_spider_1_1ssl_1_1_a_e_s_af29f6f29119e34fcf27605ed85a3460d}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!get@{get}}
+\index{get@{get}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily unsigned char$\ast$ Spider\+::ssl\+::\+A\+E\+S\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Extract the key from the class. 
+
+\begin{DoxyReturn}{Returns}
+Key in the form of a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a93e682bc36f5a52d75289fd43c2404f6}\label{class_spider_1_1ssl_1_1_a_e_s_a93e682bc36f5a52d75289fd43c2404f6}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!is\+Initialize@{is\+Initialize}}
+\index{is\+Initialize@{is\+Initialize}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{is\+Initialize()}{isInitialize()}}
+{\footnotesize\ttfamily bool Spider\+::ssl\+::\+A\+E\+S\+::is\+Initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Whether the key is initialized or not. 
+
+\begin{DoxyReturn}{Returns}
+State of the method\+: Success or Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a46a15236249277adc1b4b1961985d2bf}\label{class_spider_1_1ssl_1_1_a_e_s_a46a15236249277adc1b4b1961985d2bf}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!operator=@{operator=}}
+\index{operator=@{operator=}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES}\& Spider\+::ssl\+::\+A\+E\+S\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Copy Operator, copy a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Reference key (to be copied) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instance of class \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_ad9014e425e6149e7006b8b309a933bc2}\label{class_spider_1_1ssl_1_1_a_e_s_ad9014e425e6149e7006b8b309a933bc2}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!operator==@{operator==}}
+\index{operator==@{operator==}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Spider\+::ssl\+::\+A\+E\+S\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equal operator, allows to know if two keys are equal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & Reference key (to be copied) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State of the method\+: Success or Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a9ed853ba70dba93ed28523a9dcd52d72}\label{class_spider_1_1ssl_1_1_a_e_s_a9ed853ba70dba93ed28523a9dcd52d72}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!read@{read}}
+\index{read@{read}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool Spider\+::ssl\+::\+A\+E\+S\+::read (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Read \hyperlink{class_spider_1_1ssl_1_1_a_e_s}{A\+ES} key in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path for the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State of the method\+: Success or Failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_a187c229df6c9e59b44c6148f5eac6177}\label{class_spider_1_1ssl_1_1_a_e_s_a187c229df6c9e59b44c6148f5eac6177}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!uncrypt@{uncrypt}}
+\index{uncrypt@{uncrypt}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{uncrypt()}{uncrypt()}}
+{\footnotesize\ttfamily std\+::string Spider\+::ssl\+::\+A\+E\+S\+::uncrypt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption}) const}
+
+
+
+Decrypts data from class A\+E\+S\+Key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to uncrypt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Clear data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spider_1_1ssl_1_1_a_e_s_ac4c9691e1fd1c250343ebe8206f26026}\label{class_spider_1_1ssl_1_1_a_e_s_ac4c9691e1fd1c250343ebe8206f26026}} 
+\index{Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}!write@{write}}
+\index{write@{write}!Spider\+::ssl\+::\+A\+ES@{Spider\+::ssl\+::\+A\+ES}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Spider\+::ssl\+::\+A\+E\+S\+::write (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Write the key in a specific file director. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fd} & File Director to write in \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ssl/\hyperlink{_a_e_s_8hpp}{A\+E\+S.\+hpp}\end{DoxyCompactItemize}

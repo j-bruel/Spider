@@ -1,0 +1,118 @@
+\hypertarget{classts_1_1common_1_1_json_parser}{}\section{ts\+:\+:common\+:\+:Json\+Parser Class Reference}
+\label{classts_1_1common_1_1_json_parser}\index{ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classts_1_1common_1_1_json_parser_abba008df015d4baad7d03f0a03862ff9}{parse} (std\+::string const \&json)
+\item 
+{\footnotesize template$<$typename T\+Value $>$ }\\void \hyperlink{classts_1_1common_1_1_json_parser_a08607becc24052fb2c08cf583ac9b735}{get} (std\+::string const \&path, T\+Value \&value) const
+\item 
+{\footnotesize template$<$typename T\+Value , typename T\+Key  = T\+Value$>$ }\\void \hyperlink{classts_1_1common_1_1_json_parser_a3422774a1df58bbb3de563872f2d3841}{get} (std\+::string const \&path, std\+::vector$<$ std\+::pair$<$ T\+Key, T\+Value $>$$>$ \&values) const
+\item 
+{\footnotesize template$<$typename T\+Value $>$ }\\void \hyperlink{classts_1_1common_1_1_json_parser_aea9fd5f7744ff6a97075ebdb674f54df}{get} (std\+::string const \&path, std\+::vector$<$ T\+Value $>$ \&values)
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1_json_parser_a5397245ead2a54678856731f7a126f31}\label{classts_1_1common_1_1_json_parser_a5397245ead2a54678856731f7a126f31}} 
+void \hyperlink{classts_1_1common_1_1_json_parser_a5397245ead2a54678856731f7a126f31}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+Value $>$ }\\void \hyperlink{classts_1_1common_1_1_json_parser_acfb81f9e2bce7073b4f550b4cb99d21e}{put} (std\+::string const \&path, T\+Value const \&value)
+\item 
+\mbox{\Hypertarget{classts_1_1common_1_1_json_parser_acaa4bbc3d9de1c54c833282410f4152d}\label{classts_1_1common_1_1_json_parser_acaa4bbc3d9de1c54c833282410f4152d}} 
+std\+::string \hyperlink{classts_1_1common_1_1_json_parser_acaa4bbc3d9de1c54c833282410f4152d}{write} ()
+\begin{DoxyCompactList}\small\item\em Write the final json data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classts_1_1common_1_1_json_parser_a08607becc24052fb2c08cf583ac9b735}\label{classts_1_1common_1_1_json_parser_a08607becc24052fb2c08cf583ac9b735}} 
+\index{ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}!get@{get}}
+\index{get@{get}!ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Value $>$ \\
+void ts\+::common\+::\+Json\+Parser\+::get (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{path,  }\item[{T\+Value \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a value 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Value} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1_json_parser_a3422774a1df58bbb3de563872f2d3841}\label{classts_1_1common_1_1_json_parser_a3422774a1df58bbb3de563872f2d3841}} 
+\index{ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}!get@{get}}
+\index{get@{get}!ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Value , typename T\+Key  = T\+Value$>$ \\
+void ts\+::common\+::\+Json\+Parser\+::get (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{path,  }\item[{std\+::vector$<$ std\+::pair$<$ T\+Key, T\+Value $>$$>$ \&}]{values }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a value 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Value} & \\
+\hline
+{\em T\+Key} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em values} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1_json_parser_aea9fd5f7744ff6a97075ebdb674f54df}\label{classts_1_1common_1_1_json_parser_aea9fd5f7744ff6a97075ebdb674f54df}} 
+\index{ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}!get@{get}}
+\index{get@{get}!ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}}
+\subsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T\+Value $>$ \\
+void ts\+::common\+::\+Json\+Parser\+::get (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{path,  }\item[{std\+::vector$<$ T\+Value $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get a value 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Value} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em values} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1_json_parser_abba008df015d4baad7d03f0a03862ff9}\label{classts_1_1common_1_1_json_parser_abba008df015d4baad7d03f0a03862ff9}} 
+\index{ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}!parse@{parse}}
+\index{parse@{parse}!ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void ts\+::common\+::\+Json\+Parser\+::parse (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{json }\end{DoxyParamCaption})}
+
+Parse the json 
+\begin{DoxyParams}{Parameters}
+{\em json} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classts_1_1common_1_1_json_parser_acfb81f9e2bce7073b4f550b4cb99d21e}\label{classts_1_1common_1_1_json_parser_acfb81f9e2bce7073b4f550b4cb99d21e}} 
+\index{ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}!put@{put}}
+\index{put@{put}!ts\+::common\+::\+Json\+Parser@{ts\+::common\+::\+Json\+Parser}}
+\subsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily template$<$typename T\+Value $>$ \\
+void ts\+::common\+::\+Json\+Parser\+::put (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{path,  }\item[{T\+Value const \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add new json entry 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+Value} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Json/Json\+Parser.\+hpp\end{DoxyCompactItemize}

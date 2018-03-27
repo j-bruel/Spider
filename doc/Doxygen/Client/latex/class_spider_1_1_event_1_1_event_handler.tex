@@ -1,0 +1,76 @@
+\hypertarget{class_spider_1_1_event_1_1_event_handler}{}\section{Spider\+:\+:Event\+:\+:Event\+Handler Class Reference}
+\label{class_spider_1_1_event_1_1_event_handler}\index{Spider\+::\+Event\+::\+Event\+Handler@{Spider\+::\+Event\+::\+Event\+Handler}}
+
+
+Handle events.  
+
+
+
+
+{\ttfamily \#include $<$Event\+Handler.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_spider_1_1_event_1_1_event_handler_a97d86b6085e4158f8389f2e31dd0c336}{Event\+Handler} (const std\+::string \&host, unsigned short port)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_handler_a3c8af183af0a7e88983cea02883bc674}\label{class_spider_1_1_event_1_1_event_handler_a3c8af183af0a7e88983cea02883bc674}} 
+\hyperlink{class_spider_1_1_event_1_1_event_handler_a3c8af183af0a7e88983cea02883bc674}{Event\+Handler} (const \hyperlink{class_spider_1_1_event_1_1_event_handler}{Event\+Handler} \&handler)=delete
+\begin{DoxyCompactList}\small\item\em Default copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_handler_a1b6435063e41baebcf95e0d30962b05a}\label{class_spider_1_1_event_1_1_event_handler_a1b6435063e41baebcf95e0d30962b05a}} 
+\hyperlink{class_spider_1_1_event_1_1_event_handler}{Event\+Handler} \& \hyperlink{class_spider_1_1_event_1_1_event_handler_a1b6435063e41baebcf95e0d30962b05a}{operator=} (const \hyperlink{class_spider_1_1_event_1_1_event_handler}{Event\+Handler} \&handler)=delete
+\begin{DoxyCompactList}\small\item\em Equal operator overload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_handler_a114b675a93ef37e4f32cd264c210bf27}\label{class_spider_1_1_event_1_1_event_handler_a114b675a93ef37e4f32cd264c210bf27}} 
+\hyperlink{class_spider_1_1_event_1_1_event_handler_a114b675a93ef37e4f32cd264c210bf27}{$\sim$\+Event\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{class_spider_1_1_event_1_1_event_handler_a09a8b1b3bfce070dc83226db55c7664f}{handle} (const std\+::shared\+\_\+ptr$<$ \hyperlink{class_spider_1_1_event_1_1_i_event}{I\+Event} $>$ \&event, const \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{ssl\+::\+R\+S\+A\+Keys} \&rsa)
+\begin{DoxyCompactList}\small\item\em Handle a event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle events. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_handler_a97d86b6085e4158f8389f2e31dd0c336}\label{class_spider_1_1_event_1_1_event_handler_a97d86b6085e4158f8389f2e31dd0c336}} 
+\index{Spider\+::\+Event\+::\+Event\+Handler@{Spider\+::\+Event\+::\+Event\+Handler}!Event\+Handler@{Event\+Handler}}
+\index{Event\+Handler@{Event\+Handler}!Spider\+::\+Event\+::\+Event\+Handler@{Spider\+::\+Event\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{Event\+Handler()}{EventHandler()}}
+{\footnotesize\ttfamily Spider\+::\+Event\+::\+Event\+Handler\+::\+Event\+Handler (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{unsigned short}]{port }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Host to connect \\
+\hline
+{\em port} & Port of the host \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spider_1_1_event_1_1_event_handler_a09a8b1b3bfce070dc83226db55c7664f}\label{class_spider_1_1_event_1_1_event_handler_a09a8b1b3bfce070dc83226db55c7664f}} 
+\index{Spider\+::\+Event\+::\+Event\+Handler@{Spider\+::\+Event\+::\+Event\+Handler}!handle@{handle}}
+\index{handle@{handle}!Spider\+::\+Event\+::\+Event\+Handler@{Spider\+::\+Event\+::\+Event\+Handler}}
+\subsubsection{\texorpdfstring{handle()}{handle()}}
+{\footnotesize\ttfamily bool Spider\+::\+Event\+::\+Event\+Handler\+::handle (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \hyperlink{class_spider_1_1_event_1_1_i_event}{I\+Event} $>$ \&}]{event,  }\item[{const \hyperlink{class_spider_1_1ssl_1_1_r_s_a_keys}{ssl\+::\+R\+S\+A\+Keys} \&}]{rsa }\end{DoxyParamCaption})}
+
+
+
+Handle a event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \hyperlink{namespace_spider_1_1_event}{Event} to handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+State of the method\+: Success or Failure 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Event/\hyperlink{_event_handler_8hpp}{Event\+Handler.\+hpp}\end{DoxyCompactItemize}

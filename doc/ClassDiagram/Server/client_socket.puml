@@ -1,0 +1,71 @@
+@startuml
+
+namespace ts::common {
+
+	namespace tcp {
+	    class ClientSocket {
+	    	#mIos : boost::asio::io_service &
+            	#mSocket : boost::asio::ip::tcp::socket
+            	#mIsConnected : bool
+            	#mOnWrite : OnWriteFunc
+            	#mOnRead : OnReadFunc
+            	#mOnConnect : OnConnectFunc
+            	#mOnDisconnect : OnDisconnect
+            	#mAddress : std::string
+            	#mPort : unsigned short
+
+            	+ClientSocket(boost::asio::io_service &ios)
+            	+~ClientSocket()
+            	+connect(std::string const &host, unsigned short port) : void
+            	+asyncConnect(std::string const &host, unsigned short port, OnConnectFunc onConnect) : void
+            	+close() : void
+            	+getSocket() : boost::asio::ip::tcp::socket &
+            	+isConnected() const : bool
+            	+write(void const *data, size_t size) : size_t
+            	+asyncWrite(void const *data, size_t size, OnWriteFunc onWrite = nullptr) : void
+            	+read(void *data, size_t size) : size_t
+            	+asyncRead(void *data, size_t size, OnReadFunc onRead = nullptr) : void
+            	+setOnReadCallback(OnReadFunc onRead) : void
+            	+setOnWriteCallback(OnWriteFunc onWrite) : void
+            	+setOnConnectCallback(OnConnectFunc onConnect) : void
+            	+setOnDisconnectCallback(OnDisconnect onDisconnect) : void
+            	+getAddress() : std::string const &
+            	+getPort() : unsigned short
+            	+run() : void
+            	+getInfo() : std::string
+            	+forceConnectionStatusHas(bool i) : void
+            	-startAsyncConnect(std::string const &host, unsigned short port) : void
+            	-isDisconnectRequest(const boost::system::error_code &ec) : bool
+            	initializeAddressAndPort() : void
+	    }
+	}
+
+	namespace udp {
+	    class ClientSocket {
+	    	#mIos : boost::asio::io_service &
+            	#mSocket : boost::asio::ip::udp::socket
+            	#mOnSendTo : OnSendToFunc
+            	#mOnReceiveFrom : OnReceiveFromFunc
+            	+ClientSocket(boost::asio::io_service &ios)
+            	+~ClientSocket()
+            	+close() : void
+            	+getSocket() : boost::asio::ip::udp::socket &
+            	+sendTo(const std::string &host, unsigned short port, void const *data, size_t size) : size_t
+            	+void asyncSendTo(const std::string &host,
+            			 unsigned short port,
+            			 void const *data,
+            			 size_t size,
+            			 OnSendToFunc onSendTo = nullptr)
+            	+receiveFrom(const std::string &host, unsigned short port, void *data, size_t size) : size_t
+            	asyncReceiveFrom(const std::string &host, unsigned short port, void *data, size_t size, OnReceiveFromFunc onReceiveFrom = nullptr) : void
+            	setOnReceiveFromCallback(OnReceiveFromFunc onReceiveFrom) : void
+            	setOnSendToCallback(OnSendToFunc onSendTo) : void
+            	getAddress() const : std::string 	    
+	    }
+	}
+
+
+
+}
+
+@enduml

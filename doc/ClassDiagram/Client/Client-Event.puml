@@ -1,0 +1,101 @@
+@startuml
+
+namespace Spider {
+
+namespace Event {
+
+    class   EventHandler {
+        -mHandler : DBHandler
+        __
+        +EventHandler()
+        +~EventHandler()
+        ..
+        +bool	handle(Event, RSAKeys)
+    }
+
+    class   EventQueue {
+        +mMutex : mutex
+        +mQueue : vector<Event>
+        +mIsSet : bool
+        __
+        +EventQueue()
+        +~EventQueue()
+        ..
+        +bool    isSet()
+        +void	changeStatus()
+        +void    push(Event)
+        +void	pop()
+        +bool	get(Event)
+    }
+
+    class   Request {
+        -mSize : size_t
+        +mRequestIdx: size_t
+        +mFrom : string		mFrom
+        +mTo : string		mTo
+        +mTimestamp : time_t		mTimestamp
+        +mEvent : IEvent
+        __
+        +Request()
+        +~Request()
+        ..
+        +string	generate(int, RSAKeys, bool)
+        ..
+        -string	createHeader(int, int);
+    }
+
+    interface IEvent {
+        +Event()
+        +~Event()
+        ..
+        +string    getEventInfo()
+    }
+
+    IEvent <|.. Click
+    IEvent <|.. KeyBord
+    IEvent <|.. UserActivity
+
+    class   Click {
+        -mPoint : ClickCoord
+        -mType : ClickType
+        __
+        +Click(ClickType, string)
+        +~Click()
+        ..
+        +string   getEventInfo()
+    }
+
+    class   KeyBord {
+        -mKeys : string
+        -mSpecialChar : map<int, string>
+        __
+        +KeyBord(string)
+        +~KeyBord()
+        ..
+        +string getEventInfo()
+        +void	setKey(int)
+        +bool	isSpecialChar(int)
+    }
+
+    class   UserActivity {
+        -mActivity : string
+        __
+        +UserActivity(string)
+        +~UserActivity()
+        ..
+        +string getEventInfo()
+    }
+
+	enum ClickType {
+		LEFT_CLICK,
+		MIDDLE_CLICK,
+		RIGHT_CLICK,
+		NONE
+	}
+
+}
+
+
+}
+
+@enduml
